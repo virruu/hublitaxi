@@ -3,17 +3,18 @@
 ## Project
 
 HubliTaxi — a Next.js 15 (App Router) + TypeScript + Tailwind CSS marketing/SEO
-website for a Hubli–Dharwad taxi service. Content is file-based (JSON in
-`src/data/`); there is no database or backend service.
+website for a Hubli–Dharwad taxi service. Content is mostly file-based (JSON in
+`src/data/`). **Customer reviews** use Netlify Blobs (no external database) —
+see README.
 
 ## Cursor Cloud specific instructions
 
 - **Commands** (see `README.md` for details): `npm run dev` (dev server on
   http://localhost:3000), `npm run lint`, `npm run build`, `npm run start`.
   The update script already runs `npm install`, so dependencies are ready.
-- **Single service.** This is a static/SSG frontend only — there is no API,
-  database, or worker to start. Running the dev server is sufficient to test
-  everything.
+- **Dev server.** `npm run dev` stores reviews in `.data/reviews.json` locally.
+  Production uses Netlify Blobs automatically. Turnstile required for production
+  submissions. Admin needs `ADMIN_REVIEW_PASSWORD` + `ADMIN_SESSION_SECRET`.
 - **Business config lives in `src/data/site.ts`.** The phone/WhatsApp numbers
   there are placeholders. The booking form, click-to-call buttons and JSON-LD
   all read from this file, so update it (not individual components) when wiring
@@ -46,6 +47,10 @@ website for a Hubli–Dharwad taxi service. Content is file-based (JSON in
 - **JSON-LD reviews** — do not add `aggregateRating` or `Review` to
   `LocalBusinessJsonLd`. Google flags self-serving review snippets as invalid on
   your own business site. Ratings are shown in the UI only (Hero, Testimonials).
+- **Customer reviews** — `/reviews` form → `POST /api/reviews` → Netlify Blobs
+  (`pending`). Moderate at `/admin/reviews` with `ADMIN_REVIEW_PASSWORD` (no
+  username). Approved reviews appear on home Testimonials + `/reviews`. Security:
+  Turnstile CAPTCHA, honeypot, rate limit (3/day per hashed IP), sanitization.
 - **Deployment** is Netlify (`netlify.toml`, `@netlify/plugin-nextjs`). Do not
   switch the publish dir to a static export — server components/ISR rely on the
   runtime plugin.

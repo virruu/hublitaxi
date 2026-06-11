@@ -8,19 +8,25 @@ import { Testimonials } from "@/components/Testimonials";
 import { Faq } from "@/components/Faq";
 import { CtaBanner } from "@/components/CtaBanner";
 import { LocalBusinessJsonLd, FaqJsonLd } from "@/components/JsonLd";
+import { getHomeReviews } from "@/lib/reviews/home";
 
-export default function HomePage() {
+export default async function HomePage() {
+  const reviewStats = await getHomeReviews();
+
   return (
     <>
       <LocalBusinessJsonLd />
       <FaqJsonLd />
-      <Hero />
+      <Hero
+        ratingValue={reviewStats.averageRating}
+        ratingCount={reviewStats.totalCount}
+      />
       <Services />
       <PopularRoutes />
       <WhyChooseUs />
       <Fleet />
       <HowItWorks />
-      <Testimonials />
+      <Testimonials stats={reviewStats} />
       <Faq />
       <CtaBanner />
     </>

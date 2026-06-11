@@ -9,7 +9,7 @@ Live domain: [hublitaxi.com](https://hublitaxi.com) (deployed on Netlify).
 - **Next.js 15** (App Router, Server Components, static generation)
 - **TypeScript**
 - **Tailwind CSS 3**
-- JSON/Markdown content layer (no database required)
+- JSON content layer + moderated customer reviews (Netlify Blobs — no database)
 - SEO: dynamic `sitemap.xml`, `robots.txt`, Open Graph + JSON-LD (`TaxiService`, `FAQPage`, `Service`)
 - Deployed on **Netlify** via `@netlify/plugin-nextjs`
 
@@ -68,7 +68,46 @@ Fleet photos go in **`public/images/fleet/`**. Name files after the vehicle
 Social share preview: replace **`public/images/og.jpg`** (1200×630) or update
 `ogImage` in `src/data/site.ts`. See `public/images/og-README.md`.
 
+## Customer reviews (no database)
+
+**No Supabase or external database.** Reviews are stored in **Netlify Blobs**
+(included with your free Netlify plan).
+
+| Layer | What it does |
+| ----- | ------------ |
+| **Storage** | Netlify Blobs on production (`.data/reviews.json` locally in dev) |
+| **Moderation** | Submissions stay `pending` until you approve at `/admin/reviews` |
+| **Turnstile** | Cloudflare CAPTCHA blocks bots (required in production) |
+| **Honeypot** | Hidden field catches automated spam |
+| **Rate limit** | Max 3 submissions per hashed IP per 24 hours |
+| **Sanitization** | Plain text only — HTML/links stripped |
+
+### Setup (Netlify env vars)
+
+In **Netlify → Site settings → Environment variables**, add:
+
+| Variable | Purpose |
+| -------- | ------- |
+| `ADMIN_REVIEW_PASSWORD` | Password you choose for the moderation panel |
+| `ADMIN_SESSION_SECRET` | Random string (`openssl rand -hex 32`) |
+| `IP_HASH_SALT` | Random string for rate-limiting |
+| `NEXT_PUBLIC_TURNSTILE_SITE_KEY` | From [Cloudflare Turnstile](https://dash.cloudflare.com/turnstile) |
+| `TURNSTILE_SECRET_KEY` | Turnstile secret key |
+
+### Admin login
+
+1. Go to **`https://hublitaxi.com/admin/reviews`**
+2. Enter the password you set as `ADMIN_REVIEW_PASSWORD`
+3. Approve or reject pending reviews — approved ones appear on the home page
+
+There is no separate username; only the password you set in Netlify. The session
+lasts 8 hours (secure httpOnly cookie).
+
+Seeded reviews in `testimonials.json` always show on the home page. Approved
+customer reviews are added on top and included in the rating count.
+
 ## Deployment (Netlify)
 
 The repo includes `netlify.toml`. On Netlify, connect this GitHub repository and deploy —
 the build command is `next build` and the Next.js runtime plugin handles the rest.
+Add review env vars in the Netlify dashboard before enabling the review form in production.

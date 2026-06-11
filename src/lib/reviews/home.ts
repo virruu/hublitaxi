@@ -1,6 +1,6 @@
 import testimonials from "@/data/testimonials.json";
 import { site } from "@/data/site";
-import { getApprovedReviews } from "@/lib/reviews/db";
+import { getApprovedReviews } from "@/lib/reviews/store";
 import type { PublicReview } from "@/lib/reviews/types";
 
 export type HomeReview = PublicReview;

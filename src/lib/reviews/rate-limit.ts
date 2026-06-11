@@ -1,5 +1,5 @@
 import { createHash } from "crypto";
-import { getSupabaseAdmin } from "@/lib/reviews/db";
+import { countRecentSubmissionsByIp } from "@/lib/reviews/store";
 
 const MAX_SUBMISSIONS_PER_DAY = 3;
 
@@ -18,16 +18,7 @@ export function getClientIp(request: Request): string | undefined {
 export async function isRateLimited(ipHash: string | null): Promise<boolean> {
   if (!ipHash) return false;
 
-  const supabase = getSupabaseAdmin();
-  if (!supabase) return false;
-
-  const since = new Date(Date.now() - 24 * 60 * 60 * 1000).toISOString();
-  const { count, error } = await supabase
-    .from("reviews")
-    .select("id", { count: "exact", head: true })
-    .eq("ip_hash", ipHash)
-    .gte("created_at", since);
-
-  if (error) return false;
-  return (count ?? 0) >= MAX_SUBMISSIONS_PER_DAY;
+  const since = Date.now() - 24 * 60 * 60 * 1000;
+  const count = await countRecentSubmissionsByIp(ipHash, since);
+  return count >= MAX_SUBMISSIONS_PER_DAY;
 }

@@ -1,15 +1,11 @@
 import { NextResponse } from "next/server";
-import { getApprovedReviews, insertReview } from "@/lib/reviews/db";
-import { isReviewsEnabled, isTurnstileEnabled } from "@/lib/reviews/config";
+import { getApprovedReviews, insertReview } from "@/lib/reviews/store";
+import { isTurnstileEnabled } from "@/lib/reviews/config";
 import { parseReviewSubmission } from "@/lib/reviews/validate";
 import { verifyTurnstileToken } from "@/lib/reviews/turnstile";
 import { getClientIp, hashClientIp, isRateLimited } from "@/lib/reviews/rate-limit";
 
 export async function GET() {
-  if (!isReviewsEnabled()) {
-    return NextResponse.json({ reviews: [] });
-  }
-
   const reviews = await getApprovedReviews();
   return NextResponse.json(
     { reviews },
@@ -22,13 +18,6 @@ export async function GET() {
 }
 
 export async function POST(request: Request) {
-  if (!isReviewsEnabled()) {
-    return NextResponse.json(
-      { error: "Reviews are not available yet. Please try again later." },
-      { status: 503 }
-    );
-  }
-
   if (process.env.NODE_ENV === "production" && !isTurnstileEnabled()) {
     return NextResponse.json(
       { error: "Reviews are temporarily unavailable." },

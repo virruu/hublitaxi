@@ -1,6 +1,6 @@
 import { NextResponse } from "next/server";
 import { z } from "zod";
-import { updateReviewStatus } from "@/lib/reviews/db";
+import { updateReviewStatus } from "@/lib/reviews/store";
 import { isAdminRequest } from "@/lib/reviews/admin-auth";
 
 const bodySchema = z.object({

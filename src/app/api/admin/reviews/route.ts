@@ -7,12 +7,12 @@ import {
   isAdminRequest,
   verifyAdminPassword,
 } from "@/lib/reviews/admin-auth";
-import { getPendingReviews } from "@/lib/reviews/db";
-import { isAdminConfigured, isReviewsEnabled } from "@/lib/reviews/config";
+import { getPendingReviews } from "@/lib/reviews/store";
+import { isAdminConfigured } from "@/lib/reviews/config";
 
 export async function GET(request: Request) {
-  if (!isReviewsEnabled() || !isAdminConfigured()) {
-    return NextResponse.json({ error: "Not configured" }, { status: 503 });
+  if (!isAdminConfigured()) {
+    return NextResponse.json({ error: "Admin not configured" }, { status: 503 });
   }
 
   if (!(await isAdminRequest(request))) {

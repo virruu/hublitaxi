@@ -9,7 +9,7 @@ Live domain: [hublitaxi.com](https://hublitaxi.com) (deployed on Netlify).
 - **Next.js 15** (App Router, Server Components, static generation)
 - **TypeScript**
 - **Tailwind CSS 3**
-- JSON content layer + optional Supabase for moderated customer reviews
+- JSON content layer + moderated customer reviews (Netlify Blobs — no database)
 - SEO: dynamic `sitemap.xml`, `robots.txt`, Open Graph + JSON-LD (`TaxiService`, `FAQPage`, `Service`)
 - Deployed on **Netlify** via `@netlify/plugin-nextjs`
 
@@ -68,30 +68,43 @@ Fleet photos go in **`public/images/fleet/`**. Name files after the vehicle
 Social share preview: replace **`public/images/og.jpg`** (1200×630) or update
 `ogImage` in `src/data/site.ts`. See `public/images/og-README.md`.
 
-## Customer reviews (optional)
+## Customer reviews (no database)
 
-Genuine, moderated reviews with spam protection:
+**No Supabase or external database.** Reviews are stored in **Netlify Blobs**
+(included with your free Netlify plan).
 
 | Layer | What it does |
 | ----- | ------------ |
-| **Moderation** | All submissions stay `pending` until you approve at `/admin/reviews` |
-| **Turnstile** | Cloudflare CAPTCHA blocks bots |
+| **Storage** | Netlify Blobs on production (`.data/reviews.json` locally in dev) |
+| **Moderation** | Submissions stay `pending` until you approve at `/admin/reviews` |
+| **Turnstile** | Cloudflare CAPTCHA blocks bots (required in production) |
 | **Honeypot** | Hidden field catches automated spam |
 | **Rate limit** | Max 3 submissions per hashed IP per 24 hours |
 | **Sanitization** | Plain text only — HTML/links stripped |
 
-### Setup
+### Setup (Netlify env vars)
 
-1. Copy `.env.example` → `.env.local` and fill in values.
-2. Create a free [Supabase](https://supabase.com) project → run `supabase/reviews.sql` in the SQL editor.
-3. Add env vars in **Netlify → Site settings → Environment variables** (same keys as `.env.example`).
-4. Create [Cloudflare Turnstile](https://dash.cloudflare.com/turnstile) keys for `hublitaxi.com`.
-5. Choose a strong `ADMIN_REVIEW_PASSWORD` for the moderation panel.
-6. Generate random strings for `ADMIN_SESSION_SECRET` and `IP_HASH_SALT` (`openssl rand -hex 32`).
+In **Netlify → Site settings → Environment variables**, add:
 
-**Moderation:** visit `https://hublitaxi.com/admin/reviews`, sign in, approve or reject pending reviews.
+| Variable | Purpose |
+| -------- | ------- |
+| `ADMIN_REVIEW_PASSWORD` | Password you choose for the moderation panel |
+| `ADMIN_SESSION_SECRET` | Random string (`openssl rand -hex 32`) |
+| `IP_HASH_SALT` | Random string for rate-limiting |
+| `NEXT_PUBLIC_TURNSTILE_SITE_KEY` | From [Cloudflare Turnstile](https://dash.cloudflare.com/turnstile) |
+| `TURNSTILE_SECRET_KEY` | Turnstile secret key |
 
-Without Supabase configured, the site still works — seeded reviews in `testimonials.json` display on the home page.
+### Admin login
+
+1. Go to **`https://hublitaxi.com/admin/reviews`**
+2. Enter the password you set as `ADMIN_REVIEW_PASSWORD`
+3. Approve or reject pending reviews — approved ones appear on the home page
+
+There is no separate username; only the password you set in Netlify. The session
+lasts 8 hours (secure httpOnly cookie).
+
+Seeded reviews in `testimonials.json` always show on the home page. Approved
+customer reviews are added on top and included in the rating count.
 
 ## Deployment (Netlify)
 

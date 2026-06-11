@@ -1,7 +1,6 @@
+/** Reviews use Netlify Blobs on production (no external database). */
 export function isReviewsEnabled() {
-  return Boolean(
-    process.env.SUPABASE_URL && process.env.SUPABASE_SERVICE_ROLE_KEY
-  );
+  return true;
 }
 
 export function isTurnstileEnabled() {

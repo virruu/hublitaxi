@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { ReviewForm } from "@/components/ReviewForm";
 import { ReviewCard } from "@/components/ReviewCard";
-import { getApprovedReviews } from "@/lib/reviews/db";
-import { isReviewsEnabled } from "@/lib/reviews/config";
+import { getApprovedReviews } from "@/lib/reviews/store";
+import { isAdminConfigured } from "@/lib/reviews/config";
 import { site } from "@/data/site";
 
 export const metadata: Metadata = {
@@ -13,8 +13,8 @@ export const metadata: Metadata = {
 };
 
 export default async function ReviewsPage() {
-  const reviews = await getApprovedReviews(24);
-  const enabled = isReviewsEnabled();
+  const reviews = await getApprovedReviews(500);
+  const adminReady = isAdminConfigured();
 
   return (
     <>
@@ -46,18 +46,17 @@ export default async function ReviewsPage() {
               <li>✓ Plain text only — no links or HTML</li>
               <li>✓ We never publish your phone or email</li>
             </ul>
-            {!enabled && (
+            {!adminReady && (
               <p className="mt-4 rounded-xl bg-amber-50 px-4 py-3 text-sm text-amber-900">
-                Online review submission is being set up. You can still share
-                feedback on{" "}
-                <a href={`tel:${site.phoneHref}`} className="font-semibold underline">
-                  {site.phone}
-                </a>{" "}
-                or WhatsApp.
+                Reviews can be submitted, but moderation is not configured yet.
+                Set <code className="text-xs">ADMIN_REVIEW_PASSWORD</code> in
+                Netlify env vars to enable the admin panel.
               </p>
             )}
           </div>
-          <div>{enabled ? <ReviewForm /> : null}</div>
+          <div>
+            <ReviewForm />
+          </div>
         </div>
       </section>
 

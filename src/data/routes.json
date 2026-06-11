@@ -5,7 +5,6 @@
     "to": "Goa",
     "distanceKm": 165,
     "durationHrs": "4 – 4.5",
-    "fromPrice": 4999,
     "popular": true,
     "summary": "Skip the crowded buses and reach Goa's beaches in comfort. A scenic 4-hour drive through the Western Ghats.",
     "highlights": ["Beaches & nightlife", "Door-to-door drop", "One-way available"]
@@ -16,7 +15,6 @@
     "to": "Bangalore",
     "distanceKm": 410,
     "durationHrs": "6.5 – 7.5",
-    "fromPrice": 9499,
     "popular": true,
     "summary": "Comfortable overnight or daytime cabs to Bengaluru with experienced highway drivers and rest stops.",
     "highlights": ["NH-48 expressway", "Overnight option", "Innova available"]
@@ -27,7 +25,6 @@
     "to": "Hampi",
     "distanceKm": 145,
     "durationHrs": "3 – 3.5",
-    "fromPrice": 3999,
     "popular": true,
     "summary": "Visit the UNESCO World Heritage ruins of Hampi with a flexible round-trip cab and local driver.",
     "highlights": ["UNESCO site", "Round trip", "Sightseeing friendly"]
@@ -38,7 +35,6 @@
     "to": "Gokarna",
     "distanceKm": 160,
     "durationHrs": "3.5 – 4",
-    "fromPrice": 3999,
     "popular": true,
     "summary": "Reach the temple town and serene beaches of Gokarna in a comfortable, AC cab.",
     "highlights": ["Beach getaway", "Temple visit", "AC cabs"]
@@ -49,7 +45,6 @@
     "to": "Dandeli",
     "distanceKm": 75,
     "durationHrs": "1.5 – 2",
-    "fromPrice": 2999,
     "popular": true,
     "summary": "Quick transfers to Dandeli for river rafting, jungle safaris and resort stays.",
     "highlights": ["Adventure trips", "Resort drop", "Short ride"]
@@ -60,7 +55,6 @@
     "to": "Belagavi (Belgaum)",
     "distanceKm": 100,
     "durationHrs": "2 – 2.5",
-    "fromPrice": 2999,
     "popular": false,
     "summary": "Fast, comfortable cabs to Belagavi for business or family visits.",
     "highlights": ["Business travel", "One-way drop", "On-time pickup"]
@@ -71,7 +65,6 @@
     "to": "Mangalore",
     "distanceKm": 245,
     "durationHrs": "5 – 6",
-    "fromPrice": 9999,
     "popular": false,
     "summary": "Coastal road trip from Hubli to Mangalore with scenic ghats and comfortable cars.",
     "highlights": ["Coastal route", "Scenic ghats", "SUV recommended"]
@@ -82,7 +75,6 @@
     "to": "Dharwad",
     "distanceKm": 20,
     "durationHrs": "0.5",
-    "fromPrice": 1599,
     "popular": false,
     "summary": "Frequent, affordable rides between the twin cities of Hubli and Dharwad.",
     "highlights": ["Twin city", "Lowest fares", "Quick rides"]

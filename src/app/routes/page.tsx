@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import routes from "@/data/routes.json";
 import { inr } from "@/lib/format";
+import { routeFromPrice } from "@/lib/pricing";
 import { CtaBanner } from "@/components/CtaBanner";
 import { ArrowRight, MapPin, Clock } from "@/components/Icons";
 
@@ -51,9 +52,12 @@ export default function RoutesPage() {
                 </span>
               </div>
               <div className="mt-5 flex items-center justify-between border-t border-ink-900/5 pt-4">
-                <span className="text-lg font-extrabold">
-                  {inr(r.fromPrice)}
-                </span>
+                <div>
+                  <span className="text-xs text-ink-700">From (sedan) </span>
+                  <span className="text-lg font-extrabold">
+                    {inr(routeFromPrice(r.distanceKm))}
+                  </span>
+                </div>
                 <span className="inline-flex items-center gap-1 text-sm font-semibold text-brand-700 group-hover:underline">
                   Book now
                   <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />

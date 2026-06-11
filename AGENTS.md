@@ -1,0 +1,37 @@
+# AGENTS.md
+
+## Project
+
+HubliTaxi — a Next.js 15 (App Router) + TypeScript + Tailwind CSS marketing/SEO
+website for a Hubli–Dharwad taxi service. Content is file-based (JSON in
+`src/data/`); there is no database or backend service.
+
+## Cursor Cloud specific instructions
+
+- **Commands** (see `README.md` for details): `npm run dev` (dev server on
+  http://localhost:3000), `npm run lint`, `npm run build`, `npm run start`.
+  The update script already runs `npm install`, so dependencies are ready.
+- **Single service.** This is a static/SSG frontend only — there is no API,
+  database, or worker to start. Running the dev server is sufficient to test
+  everything.
+- **Business config lives in `src/data/site.ts`.** The phone/WhatsApp numbers
+  there are placeholders. The booking form, click-to-call buttons and JSON-LD
+  all read from this file, so update it (not individual components) when wiring
+  real contact details.
+- **Booking form has no server side.** `BookingForm` builds a `wa.me` WhatsApp
+  deep link and opens it in a new tab — there is no form POST endpoint to mock.
+  In a headless/sandboxed browser the new tab opens `web.whatsapp.com`; that is
+  expected and confirms the lead capture works.
+- **Programmatic pages.** `/routes/[slug]` and `/services/[slug]` are generated
+  via `generateStaticParams` from `src/data/routes.json` and
+  `src/data/services.json`. Adding an entry there automatically creates a new
+  page and sitemap URL — no routing code changes needed.
+- **Next.js 15 params are async.** In dynamic pages, `params` is a `Promise` and
+  must be `await`ed (and `generateMetadata` must be `async`), otherwise the build
+  fails type-checking.
+- **Fleet images** are remote (Unsplash); the hostname is allow-listed in
+  `next.config.mjs` under `images.remotePatterns`. Add new remote image hosts
+  there or the build/`next/image` will reject them.
+- **Deployment** is Netlify (`netlify.toml`, `@netlify/plugin-nextjs`). Do not
+  switch the publish dir to a static export — server components/ISR rely on the
+  runtime plugin.

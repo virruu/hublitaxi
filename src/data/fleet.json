@@ -1,0 +1,46 @@
+[
+  {
+    "slug": "sedan",
+    "name": "Sedan",
+    "example": "Swift Dzire, Etios",
+    "seats": 4,
+    "luggage": 2,
+    "ac": true,
+    "perKm": 12,
+    "image": "https://images.unsplash.com/photo-1549399542-7e3f8b79c341?auto=format&fit=crop&w=900&q=70",
+    "best": "City rides & airport transfers"
+  },
+  {
+    "slug": "suv",
+    "name": "SUV",
+    "example": "Innova, Ertiga",
+    "seats": 6,
+    "luggage": 4,
+    "ac": true,
+    "perKm": 16,
+    "image": "https://images.unsplash.com/photo-1606664515524-ed2f786a0bd6?auto=format&fit=crop&w=900&q=70",
+    "best": "Family trips & outstation"
+  },
+  {
+    "slug": "innova-crysta",
+    "name": "Innova Crysta",
+    "example": "Toyota Innova Crysta",
+    "seats": 7,
+    "luggage": 4,
+    "ac": true,
+    "perKm": 19,
+    "image": "https://images.unsplash.com/photo-1583121274602-3e2820c69888?auto=format&fit=crop&w=900&q=70",
+    "best": "Premium long-distance travel"
+  },
+  {
+    "slug": "tempo-traveller",
+    "name": "Tempo Traveller",
+    "example": "Force 12–17 seater",
+    "seats": 14,
+    "luggage": 10,
+    "ac": true,
+    "perKm": 24,
+    "image": "https://images.unsplash.com/photo-1570125909232-eb263c188f7e?auto=format&fit=crop&w=900&q=70",
+    "best": "Group tours & events"
+  }
+]

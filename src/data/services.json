@@ -1,0 +1,50 @@
+[
+  {
+    "slug": "local-taxi",
+    "title": "Local City Taxi",
+    "short": "Point-to-point rides anywhere in Hubli–Dharwad.",
+    "description": "Quick, metered-fair local taxis for shopping, hospital visits, business meetings and daily commutes across Hubli and Dharwad.",
+    "icon": "city",
+    "highlights": ["Doorstep pickup", "Hourly packages", "AC & non-AC cars"]
+  },
+  {
+    "slug": "airport-taxi",
+    "title": "Hubballi Airport Taxi",
+    "short": "On-time pickup & drop for Hubballi Airport (HBX).",
+    "description": "Flight-tracked airport transfers to and from Hubballi Airport. Meet-and-greet service, luggage assistance and fixed fares with no surge pricing.",
+    "icon": "plane",
+    "highlights": ["Flight tracking", "Fixed fares", "Meet & greet"]
+  },
+  {
+    "slug": "outstation-cabs",
+    "title": "Outstation Cabs",
+    "short": "One-way & round-trip cabs to any city.",
+    "description": "Comfortable outstation cabs from Hubli to Goa, Bangalore, Hampi, Gokarna and beyond. Choose one-way drops or round trips with experienced highway drivers.",
+    "icon": "road",
+    "highlights": ["One-way drops", "Multi-day trips", "Top-rated drivers"]
+  },
+  {
+    "slug": "railway-station-taxi",
+    "title": "Railway Station Pickup",
+    "short": "Pickup & drop for Hubballi Junction (UBL).",
+    "description": "Reliable taxis for Hubballi Junction railway station. Track your train, get a driver waiting on the platform exit, and travel without the wait.",
+    "icon": "train",
+    "highlights": ["Train tracking", "24/7 service", "Platform pickup"]
+  },
+  {
+    "slug": "tempo-traveller",
+    "title": "Tempo Traveller",
+    "short": "Group travel for family trips & events.",
+    "description": "9 to 17 seater Tempo Travellers for family tours, corporate outings, weddings and pilgrimage trips with a professional driver.",
+    "icon": "bus",
+    "highlights": ["9–17 seaters", "Group tours", "Push-back seats"]
+  },
+  {
+    "slug": "corporate-rentals",
+    "title": "Corporate & Monthly",
+    "short": "Monthly rentals & employee transport.",
+    "description": "Dedicated cars for corporate travel, employee pick-up/drop and monthly rental packages with consolidated billing and priority support.",
+    "icon": "briefcase",
+    "highlights": ["Monthly billing", "Priority support", "Dedicated cars"]
+  }
+]

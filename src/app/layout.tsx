@@ -1,0 +1,66 @@
+import type { Metadata, Viewport } from "next";
+import { Inter } from "next/font/google";
+import "./globals.css";
+import { site } from "@/data/site";
+import { Header } from "@/components/Header";
+import { Footer } from "@/components/Footer";
+import { StickyMobileCta } from "@/components/StickyMobileCta";
+
+const inter = Inter({
+  subsets: ["latin"],
+  variable: "--font-sans",
+  display: "swap",
+});
+
+export const metadata: Metadata = {
+  metadataBase: new URL(site.url),
+  title: {
+    default: `${site.name} | ${site.tagline}`,
+    template: `%s | ${site.name}`,
+  },
+  description: site.description,
+  keywords: [
+    "Hubli taxi",
+    "Hubballi taxi service",
+    "Hubli outstation cabs",
+    "Hubli to Goa taxi",
+    "Hubballi airport taxi",
+    "cab service Hubli Dharwad",
+  ],
+  alternates: { canonical: "/" },
+  openGraph: {
+    type: "website",
+    locale: "en_IN",
+    url: site.url,
+    siteName: site.name,
+    title: `${site.name} | ${site.tagline}`,
+    description: site.description,
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: `${site.name} | ${site.tagline}`,
+    description: site.description,
+  },
+  robots: { index: true, follow: true },
+};
+
+export const viewport: Viewport = {
+  themeColor: "#0b1220",
+  width: "device-width",
+  initialScale: 1,
+};
+
+export default function RootLayout({
+  children,
+}: Readonly<{ children: React.ReactNode }>) {
+  return (
+    <html lang="en" className={inter.variable}>
+      <body className="min-h-screen">
+        <Header />
+        <main className="pb-20 lg:pb-0">{children}</main>
+        <Footer />
+        <StickyMobileCta />
+      </body>
+    </html>
+  );
+}

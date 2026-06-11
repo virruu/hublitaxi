@@ -35,7 +35,7 @@
   {
     "slug": "tempo-traveller",
     "name": "Tempo Traveller",
-    "example": "Force 12–17 seater",
+    "example": "Force 12–21 seater",
     "seats": 13,
     "luggage": 10,
     "ac": true,

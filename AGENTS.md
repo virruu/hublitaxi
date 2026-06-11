@@ -36,6 +36,9 @@ website for a Hubli–Dharwad taxi service. Content is file-based (JSON in
 - **Social share (OG) image** is `public/images/og.jpg` (1200×630), configured via
   `site.ogImage` in `src/data/site.ts`. Wired into layout Open Graph/Twitter
   metadata and JSON-LD. Replace the placeholder file to customise previews.
+- **Site icon** — `src/app/icon.png`, `src/app/apple-icon.png`, and
+  `public/favicon.ico` (gold “H” mark matching the header). Regenerate or replace
+  these files to rebrand the favicon.
 - **Deployment** is Netlify (`netlify.toml`, `@netlify/plugin-nextjs`). Do not
   switch the publish dir to a static export — server components/ISR rely on the
   runtime plugin.

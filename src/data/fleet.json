@@ -7,7 +7,7 @@
     "luggage": 2,
     "ac": true,
     "perKm": 11,
-    "image": "/images/fleet/sedan.jpg",
+    "image": "/images/fleet/sedan.webp",
     "best": "City rides & airport transfers"
   },
   {
@@ -18,7 +18,7 @@
     "luggage": 4,
     "ac": true,
     "perKm": 16,
-    "image": "/images/fleet/suv.jpg",
+    "image": "/images/fleet/suv.webp",
     "best": "Family trips & outstation"
   },
   {
@@ -29,7 +29,7 @@
     "luggage": 4,
     "ac": true,
     "perKm": 19,
-    "image": "/images/fleet/innova-crysta.jpg",
+    "image": "/images/fleet/innova-crysta.webp",
     "best": "Premium long-distance travel"
   },
   {
@@ -40,7 +40,7 @@
     "luggage": 10,
     "ac": true,
     "perKm": 19,
-    "image": "/images/fleet/tempo-traveller.jpg",
+    "image": "/images/fleet/tempo-traveller.webp",
     "best": "Group tours & events"
   },
   {
@@ -51,7 +51,7 @@
     "luggage": 21,
     "ac": true,
     "perKm": 29,
-    "image": "/images/fleet/mini-bus.jpg",
+    "image": "/images/fleet/mini-bus.webp",
     "best": "Group tours & events"
   }
 ]

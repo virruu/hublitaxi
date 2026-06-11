@@ -4,7 +4,11 @@ import { notFound } from "next/navigation";
 import routes from "@/data/routes.json";
 import { site } from "@/data/site";
 import { inr } from "@/lib/format";
-import { fleetFaresForRoute, routeFromPrice } from "@/lib/pricing";
+import {
+  fleetFaresForRoute,
+  routeFromPrice,
+  routeTripKm,
+} from "@/lib/pricing";
 import { BookingForm } from "@/components/BookingForm";
 import { CtaBanner } from "@/components/CtaBanner";
 import { Check, Clock, MapPin, ArrowRight } from "@/components/Icons";
@@ -29,7 +33,7 @@ export async function generateMetadata({
   const title = `${route.from} to ${route.to} Taxi | Cab Fare from ${inr(
     fromPrice
   )}`;
-  const description = `Book a ${route.from} to ${route.to} taxi (${route.distanceKm} km, ~${route.durationHrs} hrs). One-way & round-trip cabs from ${inr(fromPrice)} (approx., sedan rate). ${route.summary}`;
+  const description = `Book a ${route.from} to ${route.to} taxi (${route.distanceKm} km, ~${route.durationHrs} hrs). Round-trip cabs from ${inr(fromPrice)} (approx., sedan rate). ${route.summary}`;
   return {
     title,
     description,
@@ -49,6 +53,7 @@ export default async function RoutePage({
 
   const fromPrice = routeFromPrice(route.distanceKm);
   const fares = fleetFaresForRoute(route.distanceKm);
+  const tripKm = routeTripKm(route.distanceKm);
 
   const jsonLd = {
     "@context": "https://schema.org",
@@ -97,7 +102,7 @@ export default async function RoutePage({
                   {route.durationHrs} hrs
                 </span>
                 <span className="rounded-full bg-brand-500 px-4 py-2 text-sm font-bold text-ink-900">
-                  From {inr(fromPrice)} (sedan)
+                  Round trip from {inr(fromPrice)} (sedan)
                 </span>
               </div>
               <ul className="mt-6 grid max-w-md gap-2 sm:grid-cols-2">
@@ -123,9 +128,8 @@ export default async function RoutePage({
               Fares for {route.from} → {route.to}
             </h2>
             <p className="mt-3 text-ink-700">
-              Indicative one-way fares (distance × per-km rate). Final fare
-              depends on car availability and trip type — get an exact quote on
-              WhatsApp.
+              Indicative round-trip fares ({tripKm} km × per-km rate). One-way
+              trips are also available — get an exact quote on WhatsApp.
             </p>
             <div className="mt-6 overflow-hidden rounded-2xl border border-ink-900/10">
               <table className="w-full text-left text-sm">

@@ -43,6 +43,9 @@ website for a Hubli–Dharwad taxi service. Content is file-based (JSON in
 - **Site icon** — `src/app/icon.png`, `src/app/apple-icon.png`, and
   `public/favicon.ico` (gold “H” mark matching the header). Regenerate or replace
   these files to rebrand the favicon.
+- **JSON-LD reviews** — do not add `aggregateRating` or `Review` to
+  `LocalBusinessJsonLd`. Google flags self-serving review snippets as invalid on
+  your own business site. Ratings are shown in the UI only (Hero, Testimonials).
 - **Deployment** is Netlify (`netlify.toml`, `@netlify/plugin-nextjs`). Do not
   switch the publish dir to a static export — server components/ISR rely on the
   runtime plugin.

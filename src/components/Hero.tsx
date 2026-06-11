@@ -4,7 +4,14 @@ import { Star, Check } from "@/components/Icons";
 
 const perks = ["24/7 availability", "Transparent fixed fares", "Verified drivers"];
 
-export function Hero() {
+type HeroProps = {
+  ratingValue?: string;
+  ratingCount?: number;
+};
+
+export function Hero({ ratingValue, ratingCount }: HeroProps) {
+  const value = ratingValue ?? site.rating.value;
+  const count = ratingCount ?? Number(site.rating.count);
   return (
     <section className="relative overflow-hidden bg-ink-900 text-white">
       <div
@@ -19,7 +26,7 @@ export function Hero() {
         <div className="animate-fade-up">
           <span className="eyebrow">
             <Star className="h-3.5 w-3.5 text-brand-600" />
-            Rated {site.rating.value}/5 by {site.rating.count}+ riders
+            Rated {value}/5 by {count} rider{count === 1 ? "" : "s"}
           </span>
           <h1 className="mt-5 text-4xl font-black leading-[1.05] tracking-tight sm:text-5xl lg:text-6xl">
             Book a taxi in{" "}

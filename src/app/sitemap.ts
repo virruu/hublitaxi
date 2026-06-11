@@ -5,7 +5,15 @@ import services from "@/data/services.json";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const now = new Date();
-  const staticPaths = ["", "/routes", "/about", "/contact", "/privacy", "/terms"];
+  const staticPaths = [
+    "",
+    "/routes",
+    "/reviews",
+    "/about",
+    "/contact",
+    "/privacy",
+    "/terms",
+  ];
 
   const entries: MetadataRoute.Sitemap = staticPaths.map((path) => ({
     url: `${site.url}${path}`,

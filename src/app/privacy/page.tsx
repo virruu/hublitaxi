@@ -29,6 +29,13 @@ export default function PrivacyPage() {
             improve our service. We never sell your data.
           </p>
           <p>
+            <strong className="text-ink-900">Customer reviews.</strong> If you
+            submit a review on our website, we store your name, city/area, star
+            rating and comment. Reviews are moderated before publication. We use a
+            hashed IP address for spam protection (not stored in plain text). We do
+            not publish your phone number or email with reviews.
+          </p>
+          <p>
             <strong className="text-ink-900">Contact.</strong> For any privacy
             questions, email us at {site.email}.
           </p>

@@ -9,7 +9,7 @@ Live domain: [hublitaxi.com](https://hublitaxi.com) (deployed on Netlify).
 - **Next.js 15** (App Router, Server Components, static generation)
 - **TypeScript**
 - **Tailwind CSS 3**
-- JSON/Markdown content layer (no database required)
+- JSON content layer + optional Supabase for moderated customer reviews
 - SEO: dynamic `sitemap.xml`, `robots.txt`, Open Graph + JSON-LD (`TaxiService`, `FAQPage`, `Service`)
 - Deployed on **Netlify** via `@netlify/plugin-nextjs`
 
@@ -68,7 +68,33 @@ Fleet photos go in **`public/images/fleet/`**. Name files after the vehicle
 Social share preview: replace **`public/images/og.jpg`** (1200×630) or update
 `ogImage` in `src/data/site.ts`. See `public/images/og-README.md`.
 
+## Customer reviews (optional)
+
+Genuine, moderated reviews with spam protection:
+
+| Layer | What it does |
+| ----- | ------------ |
+| **Moderation** | All submissions stay `pending` until you approve at `/admin/reviews` |
+| **Turnstile** | Cloudflare CAPTCHA blocks bots |
+| **Honeypot** | Hidden field catches automated spam |
+| **Rate limit** | Max 3 submissions per hashed IP per 24 hours |
+| **Sanitization** | Plain text only — HTML/links stripped |
+
+### Setup
+
+1. Copy `.env.example` → `.env.local` and fill in values.
+2. Create a free [Supabase](https://supabase.com) project → run `supabase/reviews.sql` in the SQL editor.
+3. Add env vars in **Netlify → Site settings → Environment variables** (same keys as `.env.example`).
+4. Create [Cloudflare Turnstile](https://dash.cloudflare.com/turnstile) keys for `hublitaxi.com`.
+5. Choose a strong `ADMIN_REVIEW_PASSWORD` for the moderation panel.
+6. Generate random strings for `ADMIN_SESSION_SECRET` and `IP_HASH_SALT` (`openssl rand -hex 32`).
+
+**Moderation:** visit `https://hublitaxi.com/admin/reviews`, sign in, approve or reject pending reviews.
+
+Without Supabase configured, the site still works — seeded reviews in `testimonials.json` display on the home page.
+
 ## Deployment (Netlify)
 
 The repo includes `netlify.toml`. On Netlify, connect this GitHub repository and deploy —
 the build command is `next build` and the Next.js runtime plugin handles the rest.
+Add review env vars in the Netlify dashboard before enabling the review form in production.

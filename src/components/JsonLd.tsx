@@ -15,7 +15,7 @@ export function LocalBusinessJsonLd() {
     "@context": "https://schema.org",
     "@type": "TaxiService",
     name: site.name,
-    image: `${site.url}/og.jpg`,
+    image: `${site.url}${site.ogImage}`,
     url: site.url,
     telephone: site.phoneHref,
     email: site.email,

@@ -60,9 +60,10 @@ generates an SEO-optimized landing page at `/routes/<slug>` and is added to the 
 
 Fleet photos go in **`public/images/fleet/`**. Name files after the vehicle
 `slug` in `src/data/fleet.json` (e.g. `sedan.jpg`) and set the matching
-`image` path in that JSON file. Optional site-wide assets (e.g. `og.jpg` for
-social sharing) also live under `public/images/`. See
-`public/images/fleet/README.md` for recommended dimensions.
+`image` path in that JSON file. See `public/images/fleet/README.md`.
+
+Social share preview: replace **`public/images/og.jpg`** (1200×630) or update
+`ogImage` in `src/data/site.ts`. See `public/images/og-README.md`.
 
 ## Deployment (Netlify)
 

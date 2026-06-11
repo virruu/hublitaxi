@@ -33,6 +33,9 @@ website for a Hubli–Dharwad taxi service. Content is file-based (JSON in
   `src/data/fleet.json` (e.g. `/images/fleet/sedan.jpg`). See
   `public/images/fleet/README.md` for naming and sizing. A placeholder is shown
   until the file exists.
+- **Social share (OG) image** is `public/images/og.jpg` (1200×630), configured via
+  `site.ogImage` in `src/data/site.ts`. Wired into layout Open Graph/Twitter
+  metadata and JSON-LD. Replace the placeholder file to customise previews.
 - **Deployment** is Netlify (`netlify.toml`, `@netlify/plugin-nextjs`). Do not
   switch the publish dir to a static export — server components/ISR rely on the
   runtime plugin.

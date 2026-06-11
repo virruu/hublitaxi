@@ -2,9 +2,13 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import routes from "@/data/routes.json";
-import fleet from "@/data/fleet.json";
 import { site } from "@/data/site";
 import { inr } from "@/lib/format";
+import {
+  fleetFaresForRoute,
+  routeFromPrice,
+  routeTripKm,
+} from "@/lib/pricing";
 import { BookingForm } from "@/components/BookingForm";
 import { CtaBanner } from "@/components/CtaBanner";
 import { Check, Clock, MapPin, ArrowRight } from "@/components/Icons";
@@ -25,10 +29,11 @@ export async function generateMetadata({
   const { slug } = await params;
   const route = getRoute(slug);
   if (!route) return {};
+  const fromPrice = routeFromPrice(route.distanceKm, route.fromPrice);
   const title = `${route.from} to ${route.to} Taxi | Cab Fare from ${inr(
-    route.fromPrice
+    fromPrice
   )}`;
-  const description = `Book a ${route.from} to ${route.to} taxi (${route.distanceKm} km, ~${route.durationHrs} hrs). One-way & round-trip cabs from ${inr(route.fromPrice)}. ${route.summary}`;
+  const description = `Book a ${route.from} to ${route.to} taxi (${route.distanceKm} km, ~${route.durationHrs} hrs). Round-trip cabs from ${inr(fromPrice)} (sedan, approx.). ${route.summary}`;
   return {
     title,
     description,
@@ -46,6 +51,10 @@ export default async function RoutePage({
   const route = getRoute(slug);
   if (!route) notFound();
 
+  const fromPrice = routeFromPrice(route.distanceKm, route.fromPrice);
+  const fares = fleetFaresForRoute(fromPrice);
+  const tripKm = routeTripKm(route.distanceKm);
+
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "Service",
@@ -54,7 +63,7 @@ export default async function RoutePage({
     areaServed: [route.from, route.to],
     offers: {
       "@type": "Offer",
-      price: route.fromPrice,
+      price: fromPrice,
       priceCurrency: "INR",
     },
   };
@@ -93,7 +102,7 @@ export default async function RoutePage({
                   {route.durationHrs} hrs
                 </span>
                 <span className="rounded-full bg-brand-500 px-4 py-2 text-sm font-bold text-ink-900">
-                  From {inr(route.fromPrice)}
+                  From {inr(fromPrice)}
                 </span>
               </div>
               <ul className="mt-6 grid max-w-md gap-2 sm:grid-cols-2">
@@ -119,8 +128,9 @@ export default async function RoutePage({
               Fares for {route.from} → {route.to}
             </h2>
             <p className="mt-3 text-ink-700">
-              Indicative one-way fares by car type. Final fare depends on car
-              availability and trip type — get an exact quote on WhatsApp.
+              Indicative round-trip fares ({tripKm} km total). Sedan price is
+              fixed; other cars scale by fleet per-km rate. One-way trips also
+              available — get an exact quote on WhatsApp.
             </p>
             <div className="mt-6 overflow-hidden rounded-2xl border border-ink-900/10">
               <table className="w-full text-left text-sm">
@@ -132,12 +142,15 @@ export default async function RoutePage({
                   </tr>
                 </thead>
                 <tbody className="divide-y divide-ink-900/5">
-                  {fleet.map((car) => (
+                  {fares.map((car) => (
                     <tr key={car.slug}>
                       <td className="px-4 py-3 font-medium">{car.name}</td>
                       <td className="px-4 py-3">{car.seats}</td>
                       <td className="px-4 py-3 font-semibold">
-                        {inr(car.perKm * route.distanceKm)}
+                        {inr(car.fare)}
+                        <span className="ml-1 text-xs font-normal text-ink-700">
+                          ({inr(car.perKm)}/km)
+                        </span>
                       </td>
                     </tr>
                   ))}

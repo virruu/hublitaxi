@@ -55,6 +55,9 @@ click-to-call buttons, the WhatsApp booking deep links and the structured data.
 
 Add or edit outstation routes in `src/data/routes.json`; each entry automatically
 generates an SEO-optimized landing page at `/routes/<slug>` and is added to the sitemap.
+Set **`fromPrice`** per route in `routes.json` (sedan round-trip). Other
+vehicle fares on route pages scale from that using `perKm` in `fleet.json`
+(`src/lib/pricing.ts`).
 
 ## Images
 

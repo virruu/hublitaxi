@@ -3,6 +3,7 @@
 import { useState } from "react";
 import services from "@/data/services.json";
 import routes from "@/data/routes.json";
+import fleet from "@/data/fleet.json";
 import { site, telLink, whatsappLink } from "@/data/site";
 import { Phone, WhatsApp, Check } from "@/components/Icons";
 
@@ -15,6 +16,7 @@ export function BookingForm({ defaultRoute }: { defaultRoute?: string }) {
   const [date, setDate] = useState("");
   const [time, setTime] = useState("");
   const [cab, setCab] = useState(services[0].title);
+  const [vehicle, setVehicle] = useState("Any / Not sure");
   const [name, setName] = useState("");
   const [phone, setPhone] = useState("");
 
@@ -27,6 +29,7 @@ export function BookingForm({ defaultRoute }: { defaultRoute?: string }) {
     `Drop: ${drop || "—"}`,
     `Date/Time: ${date || "—"} ${time || ""}`.trim(),
     `Service: ${cab}`,
+    `Vehicle: ${vehicle}`,
   ].join("\n");
 
   const onSubmit = (e: React.FormEvent) => {
@@ -127,6 +130,22 @@ export function BookingForm({ defaultRoute }: { defaultRoute?: string }) {
           >
             {services.map((s) => (
               <option key={s.slug}>{s.title}</option>
+            ))}
+          </select>
+        </div>
+        <div>
+          <label className={label} htmlFor="vehicle">
+            Preferred vehicle
+          </label>
+          <select
+            id="vehicle"
+            className={field}
+            value={vehicle}
+            onChange={(e) => setVehicle(e.target.value)}
+          >
+            <option>Any / Not sure</option>
+            {fleet.map((f) => (
+              <option key={f.slug}>{f.name}</option>
             ))}
           </select>
         </div>

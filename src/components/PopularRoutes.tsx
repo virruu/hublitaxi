@@ -56,9 +56,9 @@ export function PopularRoutes() {
               </div>
               <div className="mt-5 flex items-center justify-between border-t border-ink-900/5 pt-4">
                 <div>
-                  <span className="text-xs text-ink-700">Round trip (sedan) </span>
+                  <span className="text-xs text-ink-700">From </span>
                   <span className="text-lg font-extrabold text-ink-900">
-                    {inr(routeFromPrice(r.distanceKm))}
+                    {inr(routeFromPrice(r.distanceKm, r.fromPrice))}
                   </span>
                 </div>
                 <span className="inline-flex items-center gap-1 text-sm font-semibold text-brand-700 group-hover:underline">

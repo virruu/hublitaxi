@@ -26,10 +26,10 @@ website for a Hubli–Dharwad taxi service. Content is file-based (JSON in
   via `generateStaticParams` from `src/data/routes.json` and
   `src/data/services.json`. Adding an entry there automatically creates a new
   page and sitemap URL — no routing code changes needed.
-- **Route pricing** is derived in `src/lib/pricing.ts` from `distanceKm` in
-  `routes.json` and `perKm` in `fleet.json`. Fares are **round trip**
-  (distance × 2 × per-km). “From” prices use the lowest fleet rate (sedan).
-  Do not add manual `fromPrice` fields to routes.
+- **Route pricing** — `fromPrice` in `routes.json` is the **sedan round-trip**
+  fare shown on cards and route heroes. The fare table on `/routes/[slug]`
+  scales other vehicles from that anchor using fleet `perKm` ratios (see
+  `src/lib/pricing.ts`). All displayed route fares are round trip.
 - **Next.js 15 params are async.** In dynamic pages, `params` is a `Promise` and
   must be `await`ed (and `generateMetadata` must be `async`), otherwise the build
   fails type-checking.

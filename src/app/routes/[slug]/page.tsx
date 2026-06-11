@@ -29,11 +29,11 @@ export async function generateMetadata({
   const { slug } = await params;
   const route = getRoute(slug);
   if (!route) return {};
-  const fromPrice = routeFromPrice(route.distanceKm);
+  const fromPrice = routeFromPrice(route.distanceKm, route.fromPrice);
   const title = `${route.from} to ${route.to} Taxi | Cab Fare from ${inr(
     fromPrice
   )}`;
-  const description = `Book a ${route.from} to ${route.to} taxi (${route.distanceKm} km, ~${route.durationHrs} hrs). Round-trip cabs from ${inr(fromPrice)} (approx., sedan rate). ${route.summary}`;
+  const description = `Book a ${route.from} to ${route.to} taxi (${route.distanceKm} km, ~${route.durationHrs} hrs). Round-trip cabs from ${inr(fromPrice)} (sedan, approx.). ${route.summary}`;
   return {
     title,
     description,
@@ -51,8 +51,8 @@ export default async function RoutePage({
   const route = getRoute(slug);
   if (!route) notFound();
 
-  const fromPrice = routeFromPrice(route.distanceKm);
-  const fares = fleetFaresForRoute(route.distanceKm);
+  const fromPrice = routeFromPrice(route.distanceKm, route.fromPrice);
+  const fares = fleetFaresForRoute(fromPrice);
   const tripKm = routeTripKm(route.distanceKm);
 
   const jsonLd = {
@@ -102,7 +102,7 @@ export default async function RoutePage({
                   {route.durationHrs} hrs
                 </span>
                 <span className="rounded-full bg-brand-500 px-4 py-2 text-sm font-bold text-ink-900">
-                  Round trip from {inr(fromPrice)} (sedan)
+                  From {inr(fromPrice)}
                 </span>
               </div>
               <ul className="mt-6 grid max-w-md gap-2 sm:grid-cols-2">
@@ -128,8 +128,9 @@ export default async function RoutePage({
               Fares for {route.from} → {route.to}
             </h2>
             <p className="mt-3 text-ink-700">
-              Indicative round-trip fares ({tripKm} km × per-km rate). One-way
-              trips are also available — get an exact quote on WhatsApp.
+              Indicative round-trip fares ({tripKm} km total). Sedan price is
+              fixed; other cars scale by fleet per-km rate. One-way trips also
+              available — get an exact quote on WhatsApp.
             </p>
             <div className="mt-6 overflow-hidden rounded-2xl border border-ink-900/10">
               <table className="w-full text-left text-sm">

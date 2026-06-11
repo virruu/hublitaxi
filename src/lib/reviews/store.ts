@@ -1,3 +1,5 @@
+import "server-only";
+
 import { randomUUID } from "crypto";
 import { mkdir, readFile, writeFile } from "fs/promises";
 import path from "path";
@@ -10,7 +12,9 @@ const FILE_PATH = path.join(process.cwd(), ".data", "reviews.json");
 type ReviewRecord = Review & { ip_hash?: string | null };
 type ReviewData = { reviews: ReviewRecord[] };
 
-function isNetlifyRuntime() {
+/** Netlify Blobs are only available at request time, not during `next build`. */
+function canUseBlobs() {
+  if (process.env.NEXT_PHASE === "phase-production-build") return false;
   return process.env.NETLIFY === "true";
 }
 
@@ -57,28 +61,24 @@ async function writeBlobStore(data: ReviewData): Promise<void> {
 }
 
 async function readStore(): Promise<ReviewData> {
-  if (isNetlifyRuntime()) {
-    return readBlobStore();
+  if (canUseBlobs()) {
+    try {
+      return await readBlobStore();
+    } catch {
+      return { reviews: [] };
+    }
   }
 
-  try {
-    return await readBlobStore();
-  } catch {
-    return readFileStore();
-  }
+  return readFileStore();
 }
 
 async function writeStore(data: ReviewData): Promise<void> {
-  if (isNetlifyRuntime()) {
+  if (canUseBlobs()) {
     await writeBlobStore(data);
     return;
   }
 
-  try {
-    await writeBlobStore(data);
-  } catch {
-    await writeFileStore(data);
-  }
+  await writeFileStore(data);
 }
 
 export async function getApprovedReviews(limit = 500): Promise<PublicReview[]> {

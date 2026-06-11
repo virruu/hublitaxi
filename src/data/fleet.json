@@ -7,7 +7,7 @@
     "luggage": 2,
     "ac": true,
     "perKm": 11,
-    "image": "https://images.unsplash.com/photo-1549399542-7e3f8b79c341?auto=format&fit=crop&w=900&q=70",
+    "image": "/images/fleet/sedan.jpg",
     "best": "City rides & airport transfers"
   },
   {
@@ -18,7 +18,7 @@
     "luggage": 4,
     "ac": true,
     "perKm": 16,
-    "image": "https://images.unsplash.com/photo-1606664515524-ed2f786a0bd6?auto=format&fit=crop&w=900&q=70",
+    "image": "/images/fleet/suv.jpg",
     "best": "Family trips & outstation"
   },
   {
@@ -29,7 +29,7 @@
     "luggage": 4,
     "ac": true,
     "perKm": 19,
-    "image": "https://images.unsplash.com/photo-1583121274602-3e2820c69888?auto=format&fit=crop&w=900&q=70",
+    "image": "/images/fleet/innova-crysta.jpg",
     "best": "Premium long-distance travel"
   },
   {
@@ -40,10 +40,10 @@
     "luggage": 10,
     "ac": true,
     "perKm": 19,
-    "image": "https://images.unsplash.com/photo-1570125909232-eb263c188f7e?auto=format&fit=crop&w=900&q=70",
+    "image": "/images/fleet/tempo-traveller.jpg",
     "best": "Group tours & events"
   },
-   {
+  {
     "slug": "mini-bus",
     "name": "Mini Bus",
     "example": "21 seater",
@@ -51,7 +51,7 @@
     "luggage": 21,
     "ac": true,
     "perKm": 29,
-    "image": "https://images.unsplash.com/photo-1570125909232-eb263c188f7e?auto=format&fit=crop&w=900&q=70",
+    "image": "/images/fleet/mini-bus.jpg",
     "best": "Group tours & events"
   }
 ]

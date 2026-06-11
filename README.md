@@ -56,6 +56,15 @@ click-to-call buttons, the WhatsApp booking deep links and the structured data.
 Add or edit outstation routes in `src/data/routes.json`; each entry automatically
 generates an SEO-optimized landing page at `/routes/<slug>` and is added to the sitemap.
 
+## Images
+
+Fleet photos go in **`public/images/fleet/`**. Name files after the vehicle
+`slug` in `src/data/fleet.json` (e.g. `sedan.jpg`) and set the matching
+`image` path in that JSON file. See `public/images/fleet/README.md`.
+
+Social share preview: replace **`public/images/og.jpg`** (1200×630) or update
+`ogImage` in `src/data/site.ts`. See `public/images/og-README.md`.
+
 ## Deployment (Netlify)
 
 The repo includes `netlify.toml`. On Netlify, connect this GitHub repository and deploy —

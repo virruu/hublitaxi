@@ -29,9 +29,13 @@ website for a Hubli–Dharwad taxi service. Content is file-based (JSON in
 - **Next.js 15 params are async.** In dynamic pages, `params` is a `Promise` and
   must be `await`ed (and `generateMetadata` must be `async`), otherwise the build
   fails type-checking.
-- **Fleet images** are remote (Unsplash); the hostname is allow-listed in
-  `next.config.mjs` under `images.remotePatterns`. Add new remote image hosts
-  there or the build/`next/image` will reject them.
+- **Fleet images** live in `public/images/fleet/`. Set the `image` path in
+  `src/data/fleet.json` (e.g. `/images/fleet/sedan.jpg`). See
+  `public/images/fleet/README.md` for naming and sizing. A placeholder is shown
+  until the file exists.
+- **Social share (OG) image** is `public/images/og.jpg` (1200×630), configured via
+  `site.ogImage` in `src/data/site.ts`. Wired into layout Open Graph/Twitter
+  metadata and JSON-LD. Replace the placeholder file to customise previews.
 - **Deployment** is Netlify (`netlify.toml`, `@netlify/plugin-nextjs`). Do not
   switch the publish dir to a static export — server components/ISR rely on the
   runtime plugin.

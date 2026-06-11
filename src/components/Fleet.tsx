@@ -1,6 +1,6 @@
-import Image from "next/image";
 import fleet from "@/data/fleet.json";
 import { inr } from "@/lib/format";
+import { FleetImage } from "@/components/FleetImage";
 import { Users, Luggage, Snowflake } from "@/components/Icons";
 
 export function Fleet() {
@@ -18,20 +18,14 @@ export function Fleet() {
           </p>
         </div>
 
-        <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5">
           {fleet.map((car) => (
             <div
               key={car.slug}
               className="group overflow-hidden rounded-3xl border border-ink-900/10 bg-white shadow-sm transition-all hover:-translate-y-1 hover:shadow-card"
             >
               <div className="relative h-40 w-full overflow-hidden bg-gray-100">
-                <Image
-                  src={car.image}
-                  alt={`${car.name} taxi`}
-                  fill
-                  sizes="(max-width: 640px) 100vw, 25vw"
-                  className="object-cover transition-transform duration-500 group-hover:scale-105"
-                />
+                <FleetImage src={car.image} alt={`${car.name} taxi`} />
               </div>
               <div className="p-5">
                 <div className="flex items-baseline justify-between">

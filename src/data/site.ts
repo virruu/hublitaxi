@@ -13,7 +13,8 @@ export const site = {
   tagline: "Hubli's Trusted Taxi & Outstation Cab Service",
   description:
     "Book reliable local, airport and outstation taxis in Hubli–Dharwad. Clean cars, professional drivers, transparent fares and 24/7 availability. Instant booking on call or WhatsApp.",
-  // TODO: replace with the real numbers (E.164 for whatsapp, no spaces).
+  /** Open Graph / social share image (1200×630). Replace file at this path. */
+  ogImage: "/images/og.jpg",
   phone: "+91 99016 57428",
   phoneHref: "+919901657428",
   whatsapp: "919901657428",

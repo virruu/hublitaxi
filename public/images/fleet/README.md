@@ -7,7 +7,7 @@ Drop your vehicle photos here. Each file name should match the `slug` in
 
 | Setting    | Value                          |
 | ---------- | ------------------------------ |
-| Format     | JPG or WebP                    |
+| Format     | WebP (preferred) or JPG        |
 | Size       | 900 × 600 px (3:2 landscape)   |
 | File size  | Under 200 KB after compression |
 
@@ -16,7 +16,7 @@ Drop your vehicle photos here. Each file name should match the `slug` in
 Set the `image` field in `src/data/fleet.json` to the public URL path:
 
 ```json
-"image": "/images/fleet/sedan.jpg"
+"image": "/images/fleet/sedan.webp"
 ```
 
 If you use WebP or another extension, update the path accordingly:

@@ -59,7 +59,12 @@ export default async function RoutePage({
     "@context": "https://schema.org",
     "@type": "Service",
     serviceType: `${route.from} to ${route.to} taxi`,
-    provider: { "@type": "TaxiService", name: site.name, url: site.url },
+    provider: {
+      "@type": "LocalBusiness",
+      additionalType: "https://schema.org/TaxiService",
+      name: site.name,
+      url: site.url,
+    },
     areaServed: [route.from, route.to],
     offers: {
       "@type": "Offer",

@@ -10,11 +10,23 @@ function JsonLd({ data }: { data: object }) {
   );
 }
 
+/**
+ * Local business structured data for SEO.
+ *
+ * Note: We intentionally omit aggregateRating / Review markup. Google does not
+ * support review snippets on TaxiService, and self-serving ratings on your own
+ * LocalBusiness page are ineligible — that caused the Search Console error.
+ * Star ratings remain visible in the page UI (Hero, Testimonials).
+ */
 export function LocalBusinessJsonLd() {
   const data = {
     "@context": "https://schema.org",
-    "@type": "TaxiService",
+    "@type": "LocalBusiness",
+    additionalType: "https://schema.org/TaxiService",
+    "@id": `${site.url}/#localbusiness`,
     name: site.name,
+    legalName: site.legalName,
+    description: site.description,
     image: `${site.url}${site.ogImage}`,
     url: site.url,
     telephone: site.phoneHref,
@@ -33,13 +45,28 @@ export function LocalBusinessJsonLd() {
       latitude: site.geo.lat,
       longitude: site.geo.lng,
     },
-    areaServed: ["Hubli", "Dharwad", "Hubballi", "Karnataka"],
-    openingHours: "Mo-Su 00:00-23:59",
-    aggregateRating: {
-      "@type": "AggregateRating",
-      ratingValue: site.rating.value,
-      reviewCount: site.rating.count,
-    },
+    areaServed: [
+      { "@type": "City", name: "Hubli" },
+      { "@type": "City", name: "Dharwad" },
+      { "@type": "City", name: "Hubballi" },
+      { "@type": "State", name: "Karnataka" },
+    ],
+    openingHoursSpecification: [
+      {
+        "@type": "OpeningHoursSpecification",
+        dayOfWeek: [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday",
+          "Saturday",
+          "Sunday",
+        ],
+        opens: "00:00",
+        closes: "23:59",
+      },
+    ],
   };
   return <JsonLd data={data} />;
 }

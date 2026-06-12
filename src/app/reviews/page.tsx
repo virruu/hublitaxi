@@ -12,6 +12,8 @@ export const metadata: Metadata = {
   alternates: { canonical: "/reviews" },
 };
 
+export const revalidate = 60;
+
 export default async function ReviewsPage() {
   const reviews = await getApprovedReviews(500);
   const adminReady = isAdminConfigured();

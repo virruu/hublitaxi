@@ -1,3 +1,4 @@
+import { revalidatePath } from "next/cache";
 import { NextResponse } from "next/server";
 import { z } from "zod";
 import { updateReviewStatus } from "@/lib/reviews/store";
@@ -35,6 +36,11 @@ export async function PATCH(
   const ok = await updateReviewStatus(id, parsed.data.status);
   if (!ok) {
     return NextResponse.json({ error: "Could not update review" }, { status: 500 });
+  }
+
+  if (parsed.data.status === "approved") {
+    revalidatePath("/");
+    revalidatePath("/reviews");
   }
 
   return NextResponse.json({ ok: true });

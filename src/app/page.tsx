@@ -10,6 +10,8 @@ import { CtaBanner } from "@/components/CtaBanner";
 import { LocalBusinessJsonLd, FaqJsonLd } from "@/components/JsonLd";
 import { getHomeReviews } from "@/lib/reviews/home";
 
+export const revalidate = 60;
+
 export default async function HomePage() {
   const reviewStats = await getHomeReviews();
 

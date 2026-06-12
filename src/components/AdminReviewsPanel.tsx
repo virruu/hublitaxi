@@ -8,13 +8,14 @@ export function AdminReviewsPanel() {
   const [authed, setAuthed] = useState(false);
   const [pending, setPending] = useState<Review[]>([]);
   const [loading, setLoading] = useState(false);
+  const [moderatingId, setModeratingId] = useState<string | null>(null);
   const [error, setError] = useState("");
 
   const loadPending = useCallback(async () => {
     setLoading(true);
     setError("");
     try {
-      const res = await fetch("/api/admin/reviews");
+      const res = await fetch("/api/admin/reviews", { cache: "no-store" });
       if (res.status === 401) {
         setAuthed(false);
         setError("Session expired. Please sign in again.");
@@ -62,23 +63,24 @@ export function AdminReviewsPanel() {
   };
 
   const moderate = async (id: string, status: "approved" | "rejected") => {
-    setLoading(true);
+    setModeratingId(id);
     setError("");
     try {
       const res = await fetch(`/api/reviews/${id}`, {
         method: "PATCH",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ status }),
+        cache: "no-store",
       });
       if (!res.ok) {
         setError("Could not update review.");
         return;
       }
-      await loadPending();
+      setPending((prev) => prev.filter((r) => r.id !== id));
     } catch {
       setError("Network error.");
     } finally {
-      setLoading(false);
+      setModeratingId(null);
     }
   };
 
@@ -169,18 +171,18 @@ export function AdminReviewsPanel() {
                   <button
                     type="button"
                     className="rounded-xl bg-green-600 px-4 py-2 text-xs font-semibold text-white hover:bg-green-700 disabled:opacity-50"
-                    disabled={loading}
+                    disabled={moderatingId === review.id}
                     onClick={() => moderate(review.id, "approved")}
                   >
-                    Approve
+                    {moderatingId === review.id ? "Approving…" : "Approve"}
                   </button>
                   <button
                     type="button"
                     className="rounded-xl bg-red-600 px-4 py-2 text-xs font-semibold text-white hover:bg-red-700 disabled:opacity-50"
-                    disabled={loading}
+                    disabled={moderatingId === review.id}
                     onClick={() => moderate(review.id, "rejected")}
                   >
-                    Reject
+                    {moderatingId === review.id ? "Rejecting…" : "Reject"}
                   </button>
                 </div>
               </div>

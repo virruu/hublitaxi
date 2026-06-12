@@ -20,7 +20,10 @@ export async function GET(request: Request) {
   }
 
   const pending = await getPendingReviews();
-  return NextResponse.json({ pending });
+  return NextResponse.json(
+    { pending },
+    { headers: { "Cache-Control": "no-store" } }
+  );
 }
 
 export async function POST(request: Request) {

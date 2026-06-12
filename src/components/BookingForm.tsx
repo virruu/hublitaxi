@@ -70,7 +70,7 @@ export function BookingForm({ defaultRoute }: { defaultRoute?: string }) {
         ))}
       </div>
 
-      <div className="grid gap-4 sm:grid-cols-2">
+      <div className="grid grid-cols-2 gap-3 sm:gap-4 [&>div]:min-w-0">
         <div>
           <label className={label} htmlFor="pickup">
             Pickup
@@ -156,7 +156,7 @@ export function BookingForm({ defaultRoute }: { defaultRoute?: string }) {
             ))}
           </select>
         </div>
-        <div>
+        <div className="col-span-2">
           <label className={label} htmlFor="name">
             Your name
           </label>
@@ -168,7 +168,7 @@ export function BookingForm({ defaultRoute }: { defaultRoute?: string }) {
             placeholder="Full name"
           />
         </div>
-        <div className="sm:col-span-2">
+        <div className="col-span-2">
           <label className={label} htmlFor="phone">
             Mobile number
           </label>

@@ -93,6 +93,8 @@ In **Netlify → Site settings → Environment variables**, add:
 | `IP_HASH_SALT` | Random string for rate-limiting |
 | `NEXT_PUBLIC_TURNSTILE_SITE_KEY` | From [Cloudflare Turnstile](https://dash.cloudflare.com/turnstile) |
 | `TURNSTILE_SECRET_KEY` | Turnstile secret key |
+| `NETLIFY_SITE_ID` | **If reviews fail to save:** Project ID from Netlify → Project configuration → General |
+| `NETLIFY_AUTH_TOKEN` | **If reviews fail to save:** [Personal access token](https://app.netlify.com/user/applications) with Blobs access |
 
 ### Admin login
 

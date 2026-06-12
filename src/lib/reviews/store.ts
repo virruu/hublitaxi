@@ -12,10 +12,51 @@ const FILE_PATH = path.join(process.cwd(), ".data", "reviews.json");
 type ReviewRecord = Review & { ip_hash?: string | null };
 type ReviewData = { reviews: ReviewRecord[] };
 
-/** Netlify Blobs are only available at request time, not during `next build`. */
-function canUseBlobs() {
-  if (process.env.NEXT_PHASE === "phase-production-build") return false;
-  return process.env.NETLIFY === "true";
+function isBuildPhase() {
+  return process.env.NEXT_PHASE === "phase-production-build";
+}
+
+function isLocalDev() {
+  return (
+    process.env.NODE_ENV === "development" &&
+    !process.env.AWS_LAMBDA_FUNCTION_NAME &&
+    process.env.NETLIFY !== "true"
+  );
+}
+
+/** Use Netlify Blobs on production; local file store in dev. */
+function shouldUseBlobs() {
+  if (isBuildPhase()) return false;
+  if (isLocalDev()) return false;
+  return true;
+}
+
+function blobCredentials() {
+  const siteID =
+    process.env.NETLIFY_SITE_ID ??
+    process.env.SITE_ID ??
+    process.env.NETLIFY_PROJECT_ID;
+  const token =
+    process.env.NETLIFY_AUTH_TOKEN ??
+    process.env.NETLIFY_API_TOKEN ??
+    process.env.NETLIFY_PERSONAL_ACCESS_TOKEN;
+  return { siteID, token };
+}
+
+async function getBlobStore() {
+  const { getStore } = await import("@netlify/blobs");
+
+  try {
+    return getStore(BLOB_STORE);
+  } catch {
+    const { siteID, token } = blobCredentials();
+    if (siteID && token) {
+      return getStore({ name: BLOB_STORE, siteID, token });
+    }
+    throw new Error(
+      "Netlify Blobs is not configured. Add NETLIFY_SITE_ID and NETLIFY_AUTH_TOKEN in Netlify environment variables."
+    );
+  }
 }
 
 function toPublicReview(row: ReviewRecord): PublicReview {
@@ -45,8 +86,7 @@ async function writeFileStore(data: ReviewData): Promise<void> {
 }
 
 async function readBlobStore(): Promise<ReviewData> {
-  const { getStore } = await import("@netlify/blobs");
-  const store = getStore(BLOB_STORE);
+  const store = await getBlobStore();
   const data = await store.get(BLOB_KEY, { type: "json" });
   if (data && typeof data === "object" && "reviews" in data) {
     return data as ReviewData;
@@ -55,13 +95,12 @@ async function readBlobStore(): Promise<ReviewData> {
 }
 
 async function writeBlobStore(data: ReviewData): Promise<void> {
-  const { getStore } = await import("@netlify/blobs");
-  const store = getStore(BLOB_STORE);
+  const store = await getBlobStore();
   await store.setJSON(BLOB_KEY, data);
 }
 
 async function readStore(): Promise<ReviewData> {
-  if (canUseBlobs()) {
+  if (shouldUseBlobs()) {
     try {
       return await readBlobStore();
     } catch {
@@ -73,7 +112,7 @@ async function readStore(): Promise<ReviewData> {
 }
 
 async function writeStore(data: ReviewData): Promise<void> {
-  if (canUseBlobs()) {
+  if (shouldUseBlobs()) {
     await writeBlobStore(data);
     return;
   }
@@ -125,7 +164,8 @@ export async function insertReview(input: {
     });
     await writeStore(data);
     return { ok: true };
-  } catch {
+  } catch (error) {
+    console.error("insertReview failed:", error);
     return { ok: false, error: "Could not save review" };
   }
 }
@@ -141,7 +181,8 @@ export async function updateReviewStatus(
     review.status = status;
     await writeStore(data);
     return true;
-  } catch {
+  } catch (error) {
+    console.error("updateReviewStatus failed:", error);
     return false;
   }
 }

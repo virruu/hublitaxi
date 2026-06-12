@@ -26,6 +26,8 @@ export default function ContactPage() {
             <a
               href={telLink}
               className="flex items-center gap-4 rounded-2xl border border-ink-900/10 p-5 transition hover:shadow-card"
+              data-analytics="call"
+              data-analytics-location="contact_page"
             >
               <span className="flex h-11 w-11 items-center justify-center rounded-xl bg-ink-900 text-white">
                 <Phone className="h-5 w-5" />
@@ -40,6 +42,8 @@ export default function ContactPage() {
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-4 rounded-2xl border border-ink-900/10 p-5 transition hover:shadow-card"
+              data-analytics="whatsapp"
+              data-analytics-location="contact_page"
             >
               <span className="flex h-11 w-11 items-center justify-center rounded-xl bg-[#25D366] text-white">
                 <WhatsApp className="h-5 w-5" />

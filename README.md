@@ -108,6 +108,35 @@ lasts 8 hours (secure httpOnly cookie).
 Seeded reviews in `testimonials.json` always show on the home page. Approved
 customer reviews are added on top and included in the rating count.
 
+## Google Analytics 4
+
+Uses the official Next.js [`@next/third-parties`](https://nextjs.org/docs/app/building-your-application/optimizing/third-party-libraries#google-analytics) integration (Google tag / gtag.js). Analytics is **off** until you set the env var.
+
+### Setup
+
+1. Create a [GA4 property](https://analytics.google.com/) for `hublitaxi.com`.
+2. **Admin → Data streams → Web** → copy the **Measurement ID** (`G-XXXXXXXXXX`).
+3. In **Netlify → Environment variables**, add:
+   - `NEXT_PUBLIC_GA_MEASUREMENT_ID` = `G-XXXXXXXXXX`
+4. Redeploy the site.
+
+### Tracked events
+
+| User action | GA4 event | Parameters |
+| ----------- | --------- | ---------- |
+| Call button click | `contact` | `method: Phone`, `link_location` (e.g. `header`, `sticky_mobile`) |
+| WhatsApp click | `contact` | `method: WhatsApp`, `link_location` |
+| Booking form submit | `generate_lead` | `lead_source: booking_form_whatsapp`, trip/service/vehicle |
+| Review form submit | `submit_review` | `form_name`, `rating` |
+| Page views | automatic + client navigations | `page_path` |
+
+View reports in GA4 → **Reports → Engagement → Events**. Mark `generate_lead` as a
+conversion in **Admin → Events → Mark as conversion** to track booking leads.
+
+### GTM vs gtag
+
+This site uses **gtag directly** (simpler, fewer moving parts). Use [Google Tag Manager](https://tagmanager.google.com/) only if you need multiple marketing pixels (Meta, Ads, etc.) without code changes.
+
 ## Deployment (Netlify)
 
 The repo includes `netlify.toml`. On Netlify, connect this GitHub repository and deploy —

@@ -41,7 +41,12 @@ export function Header() {
         </nav>
 
         <div className="flex items-center gap-3">
-          <a href={telLink} className="hidden btn-dark sm:inline-flex">
+          <a
+            href={telLink}
+            className="hidden btn-dark sm:inline-flex"
+            data-analytics="call"
+            data-analytics-location="header"
+          >
             <Phone className="h-4 w-4" />
             Call now
           </a>

@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { Turnstile } from "@marsidev/react-turnstile";
+import { trackReviewSubmit } from "@/lib/analytics";
 import { Check } from "@/components/Icons";
 
 export function ReviewForm() {
@@ -50,6 +51,7 @@ export function ReviewForm() {
         return;
       }
 
+      trackReviewSubmit(rating);
       setStatus("success");
       setMessage(
         data.message ??

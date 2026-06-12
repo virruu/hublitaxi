@@ -1,0 +1,78 @@
+{
+  "hubli-to-goa": {
+    "related": ["hubli-to-gokarna", "hubli-to-belagavi", "hubli-to-mangalore"],
+    "comboTip": "Pair Goa with Gokarna for a quieter beach extension, or stop in Belagavi for an overnight break on longer drives."
+  },
+  "hubli-to-bangalore": {
+    "related": ["hubli-to-mysore", "hubli-to-pune", "hubli-to-hyderabad"],
+    "comboTip": "Many riders add a Mysuru weekend after Bengaluru — we quote multi-city packages on WhatsApp."
+  },
+  "hubli-to-hampi": {
+    "related": ["hubli-to-badami", "hubli-to-vijayapura", "hubli-to-goa"],
+    "comboTip": "The heritage triangle (Hampi + Badami + Vijayapura) fits a 2-day round trip from Hubli with an early start."
+  },
+  "hubli-to-gokarna": {
+    "related": ["hubli-to-goa", "hubli-to-udupi", "hubli-to-dandeli"],
+    "comboTip": "Gokarna and Goa are often combined for a 3–4 day coast trip — one-way drops each way save empty return charges."
+  },
+  "hubli-to-dandeli": {
+    "related": ["hubli-to-goa", "hubli-to-belagavi", "hubli-to-shimoga"],
+    "comboTip": "Short nature break from Hubli — easy to pair with a Belagavi lunch stop on the return highway."
+  },
+  "hubli-to-belagavi": {
+    "related": ["hubli-to-goa", "hubli-to-kolhapur", "hubli-to-dharwad"],
+    "comboTip": "Belagavi is a common fuel and meal stop before Goa — book a through cab if you want one driver end-to-end."
+  },
+  "hubli-to-mangalore": {
+    "related": ["hubli-to-udupi", "hubli-to-madikeri", "hubli-to-goa"],
+    "comboTip": "Coastal Karnataka loop: Mangalore → Udupi → Gokarna is popular over a long weekend from Hubli."
+  },
+  "hubli-to-dharwad": {
+    "related": ["hubli-to-belagavi", "hubli-to-badami", "hubli-to-goa"],
+    "comboTip": "Twin-city errands often lead into a same-day outstation — share all stops when you book hourly packages."
+  },
+  "hubli-to-pune": {
+    "related": ["hubli-to-bangalore", "hubli-to-kolhapur", "hubli-to-hyderabad"],
+    "comboTip": "Via Kolhapur misal lunch is a favourite break — tell your driver if you want a food stop built into the trip."
+  },
+  "hubli-to-mysore": {
+    "related": ["hubli-to-bangalore", "hubli-to-madikeri", "hubli-to-hyderabad"],
+    "comboTip": "Mysuru + Coorg (Madikeri) needs at least two nights — ask for a multi-day cab quote."
+  },
+  "hubli-to-hyderabad": {
+    "related": ["hubli-to-bangalore", "hubli-to-pune", "hubli-to-shirdi"],
+    "comboTip": "Hyderabad and Shirdi pilgrimages sometimes share a long weekend itinerary from North Karnataka."
+  },
+  "hubli-to-udupi": {
+    "related": ["hubli-to-mangalore", "hubli-to-gokarna", "hubli-to-madikeri"],
+    "comboTip": "Manipal campus drops and Malpe boat trips are often booked as a single day from Hubli — plan temple timing first."
+  },
+  "hubli-to-vijayapura": {
+    "related": ["hubli-to-badami", "hubli-to-hampi", "hubli-to-aurangabad"],
+    "comboTip": "Gol Gumbaz morning + Badami caves afternoon is a classic same-day heritage run from Hubli."
+  },
+  "hubli-to-badami": {
+    "related": ["hubli-to-vijayapura", "hubli-to-hampi", "hubli-to-aurangabad"],
+    "comboTip": "Add Pattadakal and Aihole between Badami and Vijayapura — our drivers know the village road order."
+  },
+  "hubli-to-shimoga": {
+    "related": ["hubli-to-hampi", "hubli-to-bangalore", "hubli-to-udupi"],
+    "comboTip": "Jog Falls day trip from Hubli often routes through Davangere — start before sunrise in monsoon season."
+  },
+  "hubli-to-kolhapur": {
+    "related": ["hubli-to-pune", "hubli-to-belagavi", "hubli-to-goa"],
+    "comboTip": "Mahalaxmi darshan plus Pune onward drop is a common one-way booking — no need to return to Hubli."
+  },
+  "hubli-to-madikeri": {
+    "related": ["hubli-to-mysore", "hubli-to-udupi", "hubli-to-bangalore"],
+    "comboTip": "Golden Temple (Bylakuppe) en route from Hassan is a free cultural stop many Coorg travellers enjoy."
+  },
+  "hubli-to-shirdi": {
+    "related": ["hubli-to-aurangabad", "hubli-to-pune", "hubli-to-hyderabad"],
+    "comboTip": "Overnight near Shirdi for morning darshan — return next day rather than a single exhausting push."
+  },
+  "hubli-to-aurangabad": {
+    "related": ["hubli-to-shirdi", "hubli-to-badami", "hubli-to-vijayapura"],
+    "comboTip": "Ajanta needs one day, Ellora another — base in Aurangabad rather than rushing from Hubli same day."
+  }
+}

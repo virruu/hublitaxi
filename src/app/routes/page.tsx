@@ -22,8 +22,17 @@ export default function RoutesPage() {
             Outstation taxi routes from Hubli
           </h1>
           <p className="mt-4 max-w-2xl text-gray-300">
-            Comfortable cabs to the most popular destinations across Karnataka
-            and Goa, with transparent fixed fares.
+            Comfortable cabs to destinations across Karnataka, Goa and
+            Maharashtra — each route page includes fares, a travel guide, and
+            instant booking. Need a local or airport cab? See our{" "}
+            <Link href="/services/outstation-cabs" className="text-brand-400 hover:underline">
+              outstation cab service
+            </Link>{" "}
+            or{" "}
+            <Link href="/" className="text-brand-400 hover:underline">
+              book from the home page
+            </Link>
+            .
           </p>
         </div>
       </section>

@@ -14,6 +14,7 @@ import { CtaBanner } from "@/components/CtaBanner";
 import { RouteTravelGuide } from "@/components/RouteTravelGuide";
 import { Check, Clock, MapPin, ArrowRight } from "@/components/Icons";
 import { getRouteGuide } from "@/lib/routes/guides";
+import { getRelatedRoutes, getRouteLinkMeta } from "@/lib/routes/links";
 
 export function generateStaticParams() {
   return routes.map((r) => ({ slug: r.slug }));
@@ -58,6 +59,33 @@ export default async function RoutePage({
   const fares = fleetFaresForRoute(fromPrice);
   const tripKm = routeTripKm(route.distanceKm);
   const guide = getRouteGuide(slug);
+  const linkMeta = getRouteLinkMeta(slug);
+  const relatedRoutes = getRelatedRoutes(slug);
+
+  const breadcrumbLd = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Home",
+        item: site.url,
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: "Routes",
+        item: `${site.url}/routes`,
+      },
+      {
+        "@type": "ListItem",
+        position: 3,
+        name: `${route.from} to ${route.to}`,
+        item: `${site.url}/routes/${route.slug}`,
+      },
+    ],
+  };
 
   const jsonLd = {
     "@context": "https://schema.org",
@@ -82,6 +110,10 @@ export default async function RoutePage({
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbLd) }}
       />
       <section className="bg-ink-900 text-white">
         <div className="container-px py-12 lg:py-16">
@@ -193,7 +225,14 @@ export default async function RoutePage({
         </div>
       </section>
 
-      {guide && <RouteTravelGuide destination={route.to} guide={guide} />}
+      {guide && (
+        <RouteTravelGuide
+          destination={route.to}
+          guide={guide}
+          relatedRoutes={relatedRoutes}
+          comboTip={linkMeta?.comboTip}
+        />
+      )}
 
       <CtaBanner />
     </>

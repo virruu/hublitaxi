@@ -11,7 +11,9 @@ import {
 } from "@/lib/pricing";
 import { BookingForm } from "@/components/BookingForm";
 import { CtaBanner } from "@/components/CtaBanner";
+import { RouteTravelGuide } from "@/components/RouteTravelGuide";
 import { Check, Clock, MapPin, ArrowRight } from "@/components/Icons";
+import { getRouteGuide } from "@/lib/routes/guides";
 
 export function generateStaticParams() {
   return routes.map((r) => ({ slug: r.slug }));
@@ -30,10 +32,11 @@ export async function generateMetadata({
   const route = getRoute(slug);
   if (!route) return {};
   const fromPrice = routeFromPrice(route.distanceKm, route.fromPrice);
+  const guide = getRouteGuide(slug);
   const title = `${route.from} to ${route.to} Taxi | Cab Fare from ${inr(
     fromPrice
   )}`;
-  const description = `Book a ${route.from} to ${route.to} taxi (${route.distanceKm} km, ~${route.durationHrs} hrs). Round-trip cabs from ${inr(fromPrice)} (sedan, approx.). ${route.summary}`;
+  const description = `Book a ${route.from} to ${route.to} taxi (${route.distanceKm} km, ~${route.durationHrs} hrs). Round-trip cabs from ${inr(fromPrice)} (sedan, approx.). ${route.summary}${guide ? ` ${guide.intro.slice(0, 120)}…` : ""}`;
   return {
     title,
     description,
@@ -54,6 +57,7 @@ export default async function RoutePage({
   const fromPrice = routeFromPrice(route.distanceKm, route.fromPrice);
   const fares = fleetFaresForRoute(fromPrice);
   const tripKm = routeTripKm(route.distanceKm);
+  const guide = getRouteGuide(slug);
 
   const jsonLd = {
     "@context": "https://schema.org",
@@ -188,6 +192,8 @@ export default async function RoutePage({
           </div>
         </div>
       </section>
+
+      {guide && <RouteTravelGuide destination={route.to} guide={guide} />}
 
       <CtaBanner />
     </>

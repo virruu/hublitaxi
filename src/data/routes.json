@@ -86,5 +86,126 @@
     "popular": false,
     "summary": "Frequent, affordable rides between the twin cities of Hubli and Dharwad.",
     "highlights": ["Twin city", "Lowest fares", "Quick rides"]
+  },
+  {
+    "slug": "hubli-to-pune",
+    "from": "Hubli",
+    "to": "Pune",
+    "distanceKm": 410,
+    "durationHrs": "7 – 8",
+    "fromPrice": 9499,
+    "popular": true,
+    "summary": "Long-distance cabs to Pune for education, IT parks, and family visits across Maharashtra.",
+    "highlights": ["Highway comfort", "One-way drops", "Innova recommended"]
+  },
+  {
+    "slug": "hubli-to-mysore",
+    "from": "Hubli",
+    "to": "Mysore",
+    "distanceKm": 430,
+    "durationHrs": "7 – 8",
+    "fromPrice": 9499,
+    "popular": true,
+    "summary": "Weekend palace trips to Mysuru with experienced drivers who know Chamundi Hill and the city core.",
+    "highlights": ["Palace city", "Family weekends", "Round trip"]
+  },
+  {
+    "slug": "hubli-to-hyderabad",
+    "from": "Hubli",
+    "to": "Hyderabad",
+    "distanceKm": 480,
+    "durationHrs": "8 – 9",
+    "fromPrice": 10499,
+    "popular": true,
+    "summary": "Cross-state taxis to Hyderabad for medical travel, weddings, and Old City visits.",
+    "highlights": ["Early departures", "Airport drops", "Toll highways"]
+  },
+  {
+    "slug": "hubli-to-udupi",
+    "from": "Hubli",
+    "to": "Udupi",
+    "distanceKm": 160,
+    "durationHrs": "3.5 – 4",
+    "fromPrice": 3999,
+    "popular": true,
+    "summary": "Temple town and Malpe beach access — popular with Manipal students and coastal pilgrims.",
+    "highlights": ["Krishna Matha", "Malpe boats", "Manipal drops"]
+  },
+  {
+    "slug": "hubli-to-vijayapura",
+    "from": "Hubli",
+    "to": "Vijayapura",
+    "distanceKm": 130,
+    "durationHrs": "2.5 – 3",
+    "fromPrice": 2999,
+    "popular": false,
+    "summary": "Day trips to Bijapur's Gol Gumbaz and Adil Shahi monuments on smooth Deccan highways.",
+    "highlights": ["Heritage", "Same-day return", "Flat roads"]
+  },
+  {
+    "slug": "hubli-to-badami",
+    "from": "Hubli",
+    "to": "Badami",
+    "distanceKm": 105,
+    "durationHrs": "2 – 2.5",
+    "fromPrice": 2499,
+    "popular": true,
+    "summary": "Rock-cut cave temples and Agastya Lake — gateway to Pattadakal and Aihole heritage circuit.",
+    "highlights": ["Cave temples", "UNESCO nearby", "Photography"]
+  },
+  {
+    "slug": "hubli-to-shimoga",
+    "from": "Hubli",
+    "to": "Shimoga",
+    "distanceKm": 195,
+    "durationHrs": "4 – 4.5",
+    "fromPrice": 4499,
+    "popular": false,
+    "summary": "Malnad gateway city en route to Jog Falls, coffee estates, and Tunga river ghats.",
+    "highlights": ["Jog Falls access", "Malnad scenery", "Nature trips"]
+  },
+  {
+    "slug": "hubli-to-kolhapur",
+    "from": "Hubli",
+    "to": "Kolhapur",
+    "distanceKm": 155,
+    "durationHrs": "3 – 3.5",
+    "fromPrice": 3499,
+    "popular": false,
+    "summary": "Quick Maharashtra border hop for Mahalaxmi darshan, palace museums, and Kolhapuri meals.",
+    "highlights": ["Temple town", "En route to Pune", "Same-day trips"]
+  },
+  {
+    "slug": "hubli-to-madikeri",
+    "from": "Hubli",
+    "to": "Madikeri",
+    "distanceKm": 330,
+    "durationHrs": "6 – 7",
+    "fromPrice": 7499,
+    "popular": true,
+    "summary": "Coorg coffee country — misty hills, homestays, and Abbey Falls from a comfortable highway cab.",
+    "highlights": ["Coorg hills", "Homestay drops", "Weekend escape"]
+  },
+  {
+    "slug": "hubli-to-shirdi",
+    "from": "Hubli",
+    "to": "Shirdi",
+    "distanceKm": 530,
+    "durationHrs": "9 – 10",
+    "fromPrice": 11499,
+    "popular": false,
+    "summary": "Pilgrimage taxis to Shirdi Sai Baba temple with drivers who know darshan timing and highway stops.",
+    "highlights": ["Pilgrimage", "Multi-day option", "Group travel"]
+  },
+  {
+    "slug": "hubli-to-aurangabad",
+    "from": "Hubli",
+    "to": "Aurangabad",
+    "distanceKm": 580,
+    "durationHrs": "10 – 11",
+    "fromPrice": 12499,
+    "popular": false,
+    "summary": "Base for Ajanta and Ellora cave tours — best as a multi-day heritage package from Hubli.",
+    "highlights": ["Ajanta & Ellora", "Heritage tours", "3-day packages"]
   }
 ]

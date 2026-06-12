@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { ReviewForm } from "@/components/ReviewForm";
-import { ReviewCard } from "@/components/ReviewCard";
-import { getApprovedReviews } from "@/lib/reviews/store";
+import { ReviewsPageList } from "@/components/ReviewsPageList";
+import { REVIEWS_PAGE_SIZE } from "@/lib/reviews/constants";
+import { getCustomerReviewsPage } from "@/lib/reviews/public";
 import { isAdminConfigured } from "@/lib/reviews/config";
 import { site } from "@/data/site";
 
@@ -15,7 +16,7 @@ export const metadata: Metadata = {
 export const revalidate = 60;
 
 export default async function ReviewsPage() {
-  const reviews = await getApprovedReviews(500);
+  const { reviews, total } = await getCustomerReviewsPage(0, REVIEWS_PAGE_SIZE);
   const adminReady = isAdminConfigured();
 
   return (
@@ -62,21 +63,14 @@ export default async function ReviewsPage() {
         </div>
       </section>
 
-      {reviews.length > 0 && (
+      {total > 0 && (
         <section className="section bg-gray-50">
           <div className="container-px">
             <h2 className="text-2xl font-extrabold">Verified rider reviews</h2>
-            <div className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-              {reviews.map((r) => (
-                <ReviewCard
-                  key={r.id}
-                  name={r.name}
-                  location={r.location}
-                  rating={r.rating}
-                  text={r.text}
-                />
-              ))}
-            </div>
+            <p className="mt-2 text-sm text-ink-700">
+              {total} verified review{total === 1 ? "" : "s"}. Scroll to load more.
+            </p>
+            <ReviewsPageList initialReviews={reviews} total={total} />
           </div>
         </section>
       )}

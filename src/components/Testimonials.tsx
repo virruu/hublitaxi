@@ -1,7 +1,13 @@
+"use client";
+
+import { useState } from "react";
 import Link from "next/link";
 import { ReviewCard } from "@/components/ReviewCard";
+import { ReviewDetailModal } from "@/components/ReviewDetailModal";
+import { ReviewsBrowseModal } from "@/components/ReviewsBrowseModal";
 import { ArrowRight } from "@/components/Icons";
 import type { HomeReviewStats } from "@/lib/reviews/home";
+import type { PublicReview } from "@/lib/reviews/types";
 
 type TestimonialsProps = {
   stats: HomeReviewStats;
@@ -9,6 +15,9 @@ type TestimonialsProps = {
 
 export function Testimonials({ stats }: TestimonialsProps) {
   const { reviews, totalCount, averageRating } = stats;
+  const [browseOpen, setBrowseOpen] = useState(false);
+  const [detailReview, setDetailReview] = useState<PublicReview | null>(null);
+  const showViewAll = totalCount > reviews.length;
 
   return (
     <section className="section">
@@ -32,11 +41,22 @@ export function Testimonials({ stats }: TestimonialsProps) {
               location={t.location}
               rating={t.rating}
               text={t.text}
+              compact
+              onClick={() => setDetailReview(t)}
             />
           ))}
         </div>
 
-        <div className="mt-10 text-center">
+        <div className="mt-10 flex flex-wrap items-center justify-center gap-x-6 gap-y-3">
+          {showViewAll && (
+            <button
+              type="button"
+              className="btn-outline"
+              onClick={() => setBrowseOpen(true)}
+            >
+              View all reviews
+            </button>
+          )}
           <Link
             href="/reviews"
             className="inline-flex items-center gap-2 text-sm font-semibold text-brand-700 hover:underline"
@@ -46,6 +66,21 @@ export function Testimonials({ stats }: TestimonialsProps) {
           </Link>
         </div>
       </div>
+
+      <ReviewsBrowseModal
+        open={browseOpen}
+        onClose={() => setBrowseOpen(false)}
+        initialReviews={reviews}
+        total={totalCount}
+        averageRating={averageRating}
+        includeSeeded
+        onReviewClick={setDetailReview}
+      />
+
+      <ReviewDetailModal
+        review={detailReview}
+        onClose={() => setDetailReview(null)}
+      />
     </section>
   );
 }

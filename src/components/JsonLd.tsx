@@ -13,10 +13,13 @@ function JsonLd({ data }: { data: object }) {
 /**
  * Local business structured data for SEO.
  *
- * Note: We intentionally omit aggregateRating / Review markup. Google does not
- * support review snippets on TaxiService, and self-serving ratings on your own
- * LocalBusiness page are ineligible — that caused the Search Console error.
- * Star ratings remain visible in the page UI (Hero, Testimonials).
+ * Star ratings in Google Search rich results: We intentionally omit
+ * aggregateRating and Review markup. Google classifies reviews on your own
+ * LocalBusiness / TaxiService site as "self-serving" and will not show star
+ * snippets in organic search (see Google Search Central review-snippet docs).
+ * Adding that markup again would risk Search Console validation errors without
+ * earning stars in results. Ratings remain visible to users in the Hero and
+ * Testimonials UI; for Google stars, use Google Business Profile reviews.
  */
 export function LocalBusinessJsonLd() {
   const data = {

@@ -5,6 +5,7 @@ import services from "@/data/services.json";
 import { site } from "@/data/site";
 import { BookingForm } from "@/components/BookingForm";
 import { CtaBanner } from "@/components/CtaBanner";
+import { ServiceRouteLinks } from "@/components/ServiceRouteLinks";
 import { serviceIcons, Check, ArrowRight } from "@/components/Icons";
 
 export function generateStaticParams() {
@@ -101,12 +102,31 @@ export default async function ServicePage({
                 </Link>
               ))}
           </div>
+          {service.slug === "outstation-cabs" && (
+            <ServiceRouteLinks title="Outstation taxi routes we cover" limit={10} />
+          )}
+          {service.slug === "airport-taxi" && (
+            <ServiceRouteLinks
+              title="Combine airport pickup with an outstation trip"
+              slugs={[
+                "hubli-to-goa",
+                "hubli-to-bangalore",
+                "hubli-to-belagavi",
+                "hubli-to-dharwad",
+              ]}
+              limit={4}
+            />
+          )}
           <p className="mt-8 text-sm text-ink-700">
             Need something specific? Call {site.name} at{" "}
             <a href={`tel:${site.phoneHref}`} className="font-semibold text-brand-700">
               {site.phone}
             </a>{" "}
-            — we are available 24/7.
+            — we are available 24/7.{" "}
+            <Link href="/routes" className="font-semibold text-brand-700 hover:underline">
+              View all routes
+            </Link>
+            .
           </p>
         </div>
       </section>

@@ -29,13 +29,12 @@ export function Hero({ ratingValue, ratingCount }: HeroProps) {
             Rated {value}/5 by {count} rider{count === 1 ? "" : "s"}
           </span>
           <h1 className="mt-5 text-4xl font-black leading-[1.05] tracking-tight sm:text-5xl lg:text-6xl">
-            Book a taxi in{" "}
-            <span className="text-brand-400">Hubli</span> in under a minute
+            Hubli & Hubballi taxi service — book in under a minute
           </h1>
           <p className="mt-5 max-w-xl text-lg text-gray-300">
-            Clean cars, professional drivers and honest fixed fares for local,
-            airport, railway and outstation trips across Hubli–Dharwad — any time
-            of day or night.
+            Clean cars, professional drivers and honest fixed fares for local
+            cabs, Hubballi Airport (HBX) transfers, railway pickups and
+            outstation trips across Dharwad — 24/7.
           </p>
 
           <ul className="mt-7 flex flex-wrap gap-x-6 gap-y-3">

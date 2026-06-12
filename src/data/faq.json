@@ -22,5 +22,17 @@
   {
     "q": "Do you provide airport and railway station pickups?",
     "a": "Absolutely. We offer flight-tracked pickups from Hubballi Airport (HBX) and train-tracked pickups from Hubballi Junction (UBL) with the driver waiting for you."
+  },
+  {
+    "q": "How much does a Hubli to Bangalore or Goa taxi cost?",
+    "a": "Sedan round-trip fares are published on each route page — for example Hubli to Goa and Hubli to Bangalore — with tables for SUV, Innova and Tempo Traveller. Share your date and car type on WhatsApp for an exact quote including one-way trips."
+  },
+  {
+    "q": "Do you have Innova or Tempo Traveller for outstation family trips?",
+    "a": "Yes. Innova Crysta, Ertiga SUVs and 9–17 seater Tempo Travellers are available for outstation routes such as Hampi, Coorg, Hyderabad and group pilgrimages. Fares scale from the sedan rate on each route page."
+  },
+  {
+    "q": "Can I book a local cab only within Hubli and Dharwad?",
+    "a": "Yes. Point-to-point local taxis and hourly packages cover the twin cities — hospital visits, college drops, shopping and daily commutes. Outstation cabs are separate and quoted per route."
   }
 ]

@@ -68,6 +68,7 @@ export function Footer() {
           <ul className="mt-4 space-y-2 text-sm">
             {routes
               .filter((r) => r.popular)
+              .slice(0, 8)
               .map((r) => (
                 <li key={r.slug}>
                   <Link
@@ -78,6 +79,14 @@ export function Footer() {
                   </Link>
                 </li>
               ))}
+            <li>
+              <Link
+                href="/routes"
+                className="font-semibold text-brand-400 hover:text-brand-300"
+              >
+                All routes & travel guides →
+              </Link>
+            </li>
           </ul>
         </div>
 

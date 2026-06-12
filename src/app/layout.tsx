@@ -25,8 +25,12 @@ export const metadata: Metadata = {
     "Hubballi taxi service",
     "Hubli outstation cabs",
     "Hubli to Goa taxi",
+    "Hubli to Bangalore cab",
     "Hubballi airport taxi",
+    "HBX airport cab",
     "cab service Hubli Dharwad",
+    "Innova taxi Hubli",
+    "tempo traveller Hubli",
   ],
   alternates: { canonical: "/" },
   openGraph: {

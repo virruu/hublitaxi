@@ -1,12 +1,21 @@
 import { Check, MapPin } from "@/components/Icons";
+import { RelatedRoutes } from "@/components/RelatedRoutes";
 import type { RouteGuide } from "@/lib/routes/guides";
+import type { RelatedRoute } from "@/lib/routes/links";
 
 type RouteTravelGuideProps = {
   destination: string;
   guide: RouteGuide;
+  relatedRoutes?: RelatedRoute[];
+  comboTip?: string;
 };
 
-export function RouteTravelGuide({ destination, guide }: RouteTravelGuideProps) {
+export function RouteTravelGuide({
+  destination,
+  guide,
+  relatedRoutes = [],
+  comboTip,
+}: RouteTravelGuideProps) {
   return (
     <section className="section bg-gray-50">
       <div className="container-px">
@@ -122,6 +131,8 @@ export function RouteTravelGuide({ destination, guide }: RouteTravelGuideProps) 
               ))}
             </ul>
           </div>
+
+          <RelatedRoutes routes={relatedRoutes} comboTip={comboTip} />
         </div>
       </div>
     </section>

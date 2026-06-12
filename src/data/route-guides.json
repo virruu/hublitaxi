@@ -1,0 +1,884 @@
+{
+  "hubli-to-goa": {
+    "title": "Hubli to Goa — beyond the beaches",
+    "intro": "Most Hubli travellers head straight to Calangute or Baga, but Goa rewards slow exploration — Portuguese quarters, quiet south-coast coves, and spice farms inland. A private cab lets you split the drive through the ghats and still reach North or South Goa by lunch.",
+    "bestTime": "November to February for cool evenings and calm seas. Monsoon (June–September) is lush but ghats can be slow; avoid major long weekends if you dislike traffic near Panaji.",
+    "routeNote": "The usual run is NH-748 toward Belagavi, then NH-66 along the coast. Khanapur before the ghats is a good chai break. Tell your driver your drop zone early — North Goa (Calangute/Porvorim) and South Goa (Palolem/Margao) split at Panaji.",
+    "mustVisit": [
+      {
+        "name": "Basilica of Bom Jesus & Old Goa",
+        "detail": "UNESCO churches and the relics of St. Francis Xavier. Go early morning before tour buses fill the lanes."
+      },
+      {
+        "name": "Fort Aguada & Sinquerim",
+        "detail": "Classic North Goa viewpoint over the Arabian Sea. Combine with a late-afternoon walk on Sinquerim beach."
+      },
+      {
+        "name": "Dudhsagar Falls (seasonal)",
+        "detail": "Spectacular tiered falls on the Goa–Karnataka border. Best after monsoon; access rules vary — ask us when booking if a day trip fits your plan."
+      }
+    ],
+    "hiddenGems": [
+      {
+        "name": "Cabo de Rama",
+        "detail": "A clifftop fort in South Goa with almost no crowds compared to Aguada. Locals come here for sunset — carry water; facilities are minimal."
+      },
+      {
+        "name": "Fontainhas, Panaji",
+        "detail": "Latin Quarter coloured houses and bakeries — most highway travellers skip it. Ideal for a one-hour stroll and a prawn rissois stop."
+      },
+      {
+        "name": "Netravali bubble lake",
+        "detail": "A short forest walk to a pond where bubbles rise from the lake bed when you clap — quirky, peaceful, and rarely on package tours."
+      }
+    ],
+    "foodStops": [
+      {
+        "name": "Khanapur",
+        "detail": "Last comfortable stop before the Western Ghat climb — hot snacks and tea."
+      },
+      {
+        "name": "Mapusa Friday market (if timing fits)",
+        "detail": "Authentic Goan produce and spices — plan a Friday morning arrival to browse."
+      }
+    ],
+    "travelTips": [
+      "Book a round-trip cab if you want the same driver for Dudhsagar or spice-farm detours.",
+      "Carry cash for beach shacks and small tolls; UPI works in towns but not everywhere on the coast.",
+      "North Goa suits nightlife; South Goa suits quiet stays — pick one base to avoid daily cross-state driving.",
+      "Weekend departures from Hubli: leave before 6 AM to clear ghats before heavy truck traffic."
+    ]
+  },
+  "hubli-to-bangalore": {
+    "title": "Hubli to Bengaluru — highway smart",
+    "intro": "The NH-48 corridor is one of Karnataka's busiest business routes. Whether it's a hospital visit, airport drop, or relocation, a dedicated cab beats juggling train timings from Hubballi Junction.",
+    "bestTime": "October to March for pleasant drives. Summer afternoons on the plateau can be warm — AC sedans are worth it.",
+    "routeNote": "Hubli → Davangere → Chitradurga → Tumakuru → Bengaluru is the standard expressway mix. Peak slowdowns often hit Tumakuru outskirts and Electronic City approach — plan buffer for airport slots.",
+    "mustVisit": [
+      {
+        "name": "Lalbagh or Cubbon Park (if time permits)",
+        "detail": "Green breaks in the city centre — Lalbagh for the glass house area; Cubbon Park for a quick walk near MG Road."
+      },
+      {
+        "name": "Bangalore Palace / Vidhana Soudha drive-by",
+        "detail": "Architecture photo stops en route to your hotel — no need for a full day if you're on business."
+      },
+      {
+        "name": "Nandi Hills (detour)",
+        "detail": "Sunrise viewpoint ~60 km north-east of the city. Popular with Hubli families — add 3–4 hours to your trip."
+      }
+    ],
+    "hiddenGems": [
+      {
+        "name": "Devarayanadurga hill temple",
+        "detail": "Near Tumakuru — forested hill shrines and views most Bengaluru-bound travellers fly past on the highway."
+      },
+      {
+        "name": "Chitradurga Fort (brief stop)",
+        "detail": "Massive hill fort visible from the highway. Even 45 minutes at the lower gates gives a memorable history stop kids enjoy."
+      },
+      {
+        "name": "Thattekere lake (south-east BLR)",
+        "detail": "Quiet birding spot locals use — far calmer than commercial 'lake visits' near the city core."
+      }
+    ],
+    "foodStops": [
+      {
+        "name": "Davangere benne dosa",
+        "detail": "Classic highway breakfast — ask your driver for a trusted dosa hotel off the main road."
+      },
+      {
+        "name": "Tumakuru khara mandakki",
+        "detail": "Spiced puffed rice snack — quick, local, and easy in the car."
+      }
+    ],
+    "travelTips": [
+      "For Kempegowda International Airport, share your terminal and flight time — we pad for ORR traffic.",
+      "Overnight drives are common; confirm driver rotation policy for trips starting after 10 PM.",
+      "BLR one-way drops are popular — you don't pay return empty if you only need a single direction.",
+      "Keep a photo of your booking on WhatsApp for toll plaza stops."
+    ]
+  },
+  "hubli-to-hampi": {
+    "title": "Hampi from Hubli — ruins, boulders, and the Tungabhadra",
+    "intro": "Hampi's Vijayanagara ruins spread across a surreal boulder landscape. At ~145 km from Hubli, it's the perfect same-day or weekend round trip — especially with a driver who knows which gate to use for Virupaksha vs the royal enclosure.",
+    "bestTime": "November to February — cool mornings for climbing Matanga Hill. Avoid peak afternoon sun in April–May; start at dawn.",
+    "routeNote": "Via Hosapete (Hospet) on NH-67. Most travellers enter near Hampi Bazaar / Virupaksha Temple. If you're staying in Sanapur or Anegundi across the river, tell us — the coracle crossing is a different approach.",
+    "mustVisit": [
+      {
+        "name": "Virupaksha Temple & Hampi Bazaar",
+        "detail": "The living temple heart of the site — start here, then walk the bazaar lane toward the river."
+      },
+      {
+        "name": "Vijaya Vittala Temple & stone chariot",
+        "detail": "Iconic carved pillars and the chariot — electric buggies run from the parking area; wear flat shoes."
+      },
+      {
+        "name": "Matanga Hill sunrise",
+        "detail": "Panoramic view over the ruins. A 30–40 minute climb — torch helpful in pre-dawn dark."
+      }
+    ],
+    "hiddenGems": [
+      {
+        "name": "Anegundi across the river",
+        "detail": "Older than Vijayanagara — village lanes, Pampa Sarovar, and quieter temples. Most day-trippers never cross the Tungabhadra."
+      },
+      {
+        "name": "Sanapur lake cliff jump spot",
+        "detail": "Young travellers and climbers know this reservoir edge — swim only where locals say it's safe; no lifeguards."
+      },
+      {
+        "name": "Underground Shiva temple (Badavilinga)",
+        "detail": "Often rushed past on group tours — a shaded, atmospheric stop five minutes from the royal centre."
+      }
+    ],
+    "foodStops": [
+      {
+        "name": "Hosapete town",
+        "detail": "Fuel, ATM, and proper meals before the last 13 km to Hampi — options in the bazaar are tourist-priced."
+      }
+    ],
+    "travelTips": [
+      "Archaeological site tickets are separate from transport — carry ID.",
+      "Combine Hampi + Badami in a 2-day cab package if you love heritage — we quote multi-day rates on WhatsApp.",
+      "Dusty paths — closed shoes beat sandals.",
+      "Monkeys near the temple — secure bags and don't feed them."
+    ]
+  },
+  "hubli-to-gokarna": {
+    "title": "Gokarna — temples and secret beaches",
+    "intro": "Gokarna balances pilgrimage and beach life — OM Beach, Kudle, and Half Moon are walkable from town with the right drop point. From Hubli it's a half-day drive, ideal for long weekends without the Goa party crowd.",
+    "bestTime": "October to March for swimming. Shivaratri draws huge crowds — book cabs early if travelling then.",
+    "routeNote": "Through Sirsi ghats or via Hubli–Karwar road depending on road work — our drivers take the smoother option on the day. Drop at main temple road vs Kudle beach road saves walking with luggage.",
+    "mustVisit": [
+      {
+        "name": "Mahabaleshwar Temple",
+        "detail": "Sacred Shiva temple at the town core — dress modestly; phones may have restrictions inside."
+      },
+      {
+        "name": "OM Beach",
+        "detail": "Named for its shape — shacks, swimming, and the classic Gokarna photo. Park at the hilltop lot and walk down."
+      },
+      {
+        "name": "Kudle Beach",
+        "detail": "Softer vibe than OM — good for sunset dinners on the sand."
+      }
+    ],
+    "hiddenGems": [
+      {
+        "name": "Half Moon & Paradise Beach (coastal trek)",
+        "detail": "Reach by foot from OM or a short boat — Paradise is the quietest swim spot regulars protect from loud music."
+      },
+      {
+        "name": "Mirjan Fort",
+        "detail": "15 km north — laterite fort in greenery. History buffs love it; almost zero international tourists."
+      },
+      {
+        "name": "Yana Caves (detour near Sirsi)",
+        "detail": "Black limestone spires in jungle — add half a day from the main highway if you want adventure beyond beaches."
+      }
+    ],
+    "foodStops": [
+      {
+        "name": "Sirsi town",
+        "detail": "Malnad meals and coffee — reliable stop before the final ghats."
+      }
+    ],
+    "travelTips": [
+      "Beach roads are narrow — smaller cars park easier; tempo for groups.",
+      "Carry torch for evening walks between beaches.",
+      "Alcohol rules near temple zones — respect local sentiment.",
+      "Weekend cottages fill fast — align cab pickup time when you check out."
+    ]
+  },
+  "hubli-to-dandeli": {
+    "title": "Dandeli — Kali river and Western Ghats wildlife",
+    "intro": "Dandeli is Karnataka's adventure pocket — white-water rafting, jungle lodges, and hornbill country. At only ~75 km from Hubli, it's the shortest serious nature escape on our map.",
+    "bestTime": "October to May for rafting (water levels matter). Winter mornings are best for birding; monsoon is green but activities may pause.",
+    "routeNote": "Quick run on NH-48 toward Haliyal then Dandeli town. Resorts are scattered — send your lodge pin on WhatsApp so the driver reaches the right forest gate.",
+    "mustVisit": [
+      {
+        "name": "Kali River white-water rafting",
+        "detail": "Grade II–III sections in season — book resort slots in advance on holidays."
+      },
+      {
+        "name": "Dandeli Wildlife Sanctuary jeep safari",
+        "detail": "Chance to spot gaur, deer, and rich birdlife — dawn slots are coolest and most active."
+      },
+      {
+        "name": "Syntheri Rocks",
+        "detail": "Monolithic rock face in the valley — viewpoint and short forest approach."
+      }
+    ],
+    "hiddenGems": [
+      {
+        "name": "Kavala Caves",
+        "detail": "Limestone cave with a steep climb — adventurous; fewer families, more thrill seekers."
+      },
+      {
+        "name": "Supa Dam viewpoint",
+        "detail": "Locals picnic here when the reservoir is full — sunset colours on water, no entry fee fuss."
+      },
+      {
+        "name": "Kulgi Nature Camp trails",
+        "detail": "Interpretive forest walks the package resorts don't always advertise — ask at the forest office."
+      }
+    ],
+    "foodStops": [
+      {
+        "name": "Haliyal",
+        "detail": "Last straightforward town meals before resort-only dining."
+      }
+    ],
+    "travelTips": [
+      "Pack insect repellent and quick-dry clothes for rafting.",
+      "Resort packages often include meals — confirm before eating only on the highway.",
+      "Same-day Hubli–Dandeli–Hubli is easy; rafting plus safari usually needs an overnight.",
+      "Carry cash for forest fees where card networks are weak."
+    ]
+  },
+  "hubli-to-belagavi": {
+    "title": "Belagavi (Belgaum) — fort city on the Maharashtra border",
+    "intro": "Belagavi is a practical business and family hub — strong food culture, a historic fort, and a stepping stone to Goa or Kolhapur. The Hubli run is short enough for same-day meetings.",
+    "bestTime": "Year-round; winters are pleasant for fort walks. Avoid midday summer walks on exposed ramparts.",
+    "routeNote": "Straight shot on NH-48 south — about 2 hours without stops. Traffic peaks near Belagavi city entry in evening hours.",
+    "mustVisit": [
+      {
+        "name": "Belagavi Fort & Kamal Basadi",
+        "detail": "Jain temple inside the fort complex — intricate stone work and city views from the walls."
+      },
+      {
+        "name": "Kapileshwara Temple area",
+        "detail": "Old city atmosphere and sweet shops nearby."
+      },
+      {
+        "name": "Gokak Falls (detour)",
+        "detail": "Seasonal cascade ~70 km away — worth it in monsoon/post-monsoon for a half-day extension."
+      }
+    ],
+    "hiddenGems": [
+      {
+        "name": "Hooli Panchalingeshwara",
+        "detail": "Ancient Chalukya temple village — serious heritage buffs detour here instead of only the city fort."
+      },
+      {
+        "name": "Yellur Gad hilltop temple",
+        "detail": "Belagavi locals hike or drive up for panoramic plateau views — quiet on weekdays."
+      },
+      {
+        "name": "Kittur Rani Chennamma memorial",
+        "detail": "Powerful history stop en route from Hubli — often skipped by non-Kannadiga travellers."
+      }
+    ],
+    "foodStops": [
+      {
+        "name": "Belagavi kunda & mandige",
+        "detail": "Buy milk sweets to take home — ask for shops near Camp area."
+      }
+    ],
+    "travelTips": [
+      "Popular one-way drop before Goa — quote one-way fare on WhatsApp.",
+      "Hospital and army area addresses need pin codes — share on booking.",
+      "Evening return to Hubli same day is comfortable.",
+      "Weekend traffic toward Goa can affect return timing — pad 30 minutes."
+    ]
+  },
+  "hubli-to-mangalore": {
+    "title": "Mangaluru — coast, temples, and Malnad coffee",
+    "intro": "Mangalore (Mangaluru) mixes Tulu coast culture, seafood, and access to Dharmasthala or Udupi northward. From Hubli you cross the Shiradi or alternative ghats depending on season — a full half-day drive.",
+    "bestTime": "September to March — post-monsoon rivers and comfortable humidity. Monsoon ghats need experienced drivers.",
+    "routeNote": "Routes vary (Charmadi, Shiradi alternatives) based on landslide news — our drivers check conditions. Specify Kudroli temple, Panambur beach, or airport for the drop.",
+    "mustVisit": [
+      {
+        "name": "Panambur Beach",
+        "detail": "Managed city beach with lifeguards — good for families."
+      },
+      {
+        "name": "Kadri Manjunath Temple",
+        "detail": "Hilltop temple with bronze statues and city views."
+      },
+      {
+        "name": "St. Aloysius Chapel murals",
+        "detail": "Stunning interior paintings — short central stop, dress respectfully."
+      }
+    ],
+    "hiddenGems": [
+      {
+        "name": "Pilikula Nisargadhama",
+        "detail": "Local families' nature park and lake — not on typical tourist lists but great with kids."
+      },
+      {
+        "name": "Someshwara Beach & rocks",
+        "detail": "Quieter than Panambur — sunset among laterite rock formations."
+      },
+      {
+        "name": "Kateel Durgaparameshwari (detour)",
+        "detail": "River-island temple near the airport road — powerful local pilgrimage stop."
+      }
+    ],
+    "foodStops": [
+      {
+        "name": "Sakleshpur / Hassan belt (route dependent)",
+        "detail": "Malnad coffee and kadubu if your driver takes the Hassan scenic loop."
+      }
+    ],
+    "travelTips": [
+      "Seafood lunches peak after 12:30 — tell us if you want a coastal lunch stop.",
+      "Mangalore airport drops need flight number for tracking.",
+      "Innova recommended for ghat comfort with luggage.",
+      "Combine with Udupi in a 2-day itinerary — we quote multi-stop trips."
+    ]
+  },
+  "hubli-to-dharwad": {
+    "title": "Hubli–Dharwad twin cities",
+    "intro": "The twin cities are only 20 km apart but daily commuters know traffic on the NH-48 stretch and old Dharwad's lane layout. A local cab saves parking pain for hospital visits, university errands, and family runs.",
+    "bestTime": "Any time — shortest route on our list. Evenings around Court Circle can be congested.",
+    "routeNote": "Typically via NH-48 / PB Road depending on your pickup in Hubli (Gokul Road, Vidyanagar, etc.). Dharwad drops often need landmark names — 'KCDS', 'SDM', or 'Railway station'.",
+    "mustVisit": [
+      {
+        "name": "Unkal Lake, Hubli",
+        "detail": "Evening walkway and boating — combine before crossing to Dharwad."
+      },
+      {
+        "name": "Nrupatunga Hill, Hubli",
+        "detail": "City viewpoint — short drive up, popular at sunset."
+      },
+      {
+        "name": "Dharwad Fort & Someshwara Temple",
+        "detail": "Old town history — narrow lanes; cab drops you at the gate."
+      }
+    ],
+    "hiddenGems": [
+      {
+        "name": "Indira Gandhi Glass House Garden",
+        "detail": "Hubli families' evening park — rarely mentioned in 'tourist' guides but lively on weekends."
+      },
+      {
+        "name": "Dharwad Pedha makers (Line Bazaar)",
+        "detail": "Buy fresh pedha from legacy sweet makers — locals know which counter opened that morning."
+      },
+      {
+        "name": "Banashankari Temple, Amargol",
+        "detail": "Between the twins — peaceful stop locals use before highway long hops."
+      }
+    ],
+    "foodStops": [
+      {
+        "name": "Dharwad pedha",
+        "detail": "Takeaway box for the ride back — doesn't need a long stop."
+      }
+    ],
+    "travelTips": [
+      "Lowest fare route — ideal for hourly packages if you have multiple stops.",
+      "University admission season needs early booking for repeated day trips.",
+      "Share exact Hubli and Dharwad pins — 'city centre' is ambiguous.",
+      "Railway station transfers: specify Hubballi Junction (UBL) vs Dharwad station."
+    ]
+  },
+  "hubli-to-pune": {
+    "title": "Hubli to Pune — education, IT, and highway comfort",
+    "intro": "Pune draws Hubli students, IT relocations, and medical travellers. It's a long highway day across Maharashtra — comfortable Innova or Crysta seats matter more than on the short Dharwad hop.",
+    "bestTime": "October to March. Monsoon ghats on the Maharashtra side can slow evening arrivals.",
+    "routeNote": "Commonly via Kolhapur or Solapur corridors depending on road work — drivers pick the faster day-of route. Drops in Hinjewadi, Kothrud, or Pune station should be stated at booking.",
+    "mustVisit": [
+      {
+        "name": "Shaniwar Wada",
+        "detail": "Maratha history in the old city — pair with a walk through Laxmi Road."
+      },
+      {
+        "name": "Sinhagad Fort (detour)",
+        "detail": "Popular sunrise/outdoor escape — add half a day if hikers in your group."
+      },
+      {
+        "name": "Aga Khan Palace",
+        "detail": "Gandhi-era memorial and gardens — calm stop away from mall traffic."
+      }
+    ],
+    "hiddenGems": [
+      {
+        "name": "Pataleshwar Cave Temple",
+        "detail": "Rock-cut shrine in the city centre — quick, ancient, and overlooked by mall-focused trips."
+      },
+      {
+        "name": "Taljai Hill forest walk",
+        "detail": "Locals' morning walk spot — peacocks if you're early."
+      },
+      {
+        "name": "Mulshi lake drive (west Pune)",
+        "detail": "Reservoir scenery without the Lonavala crowds — ask for a scenic return if time allows."
+      }
+    ],
+    "foodStops": [
+      {
+        "name": "Kolhapur misal (if via Kolhapur)",
+        "detail": "Authentic lunch stop — highway hotels pale next to city misal joints."
+      }
+    ],
+    "travelTips": [
+      "Overnight start from Hubli reaches Pune by afternoon — safer than single-driver fatigue.",
+      "One-way Pune drops common for relocations — confirm luggage space for Innova.",
+      "Pune airport (PNQ) needs terminal and airline for timing.",
+      "Share WhatsApp live location at Kolhapur bypass if family tracks your trip."
+    ]
+  },
+  "hubli-to-mysore": {
+    "title": "Mysuru — palaces, silk, and sandalwood",
+    "intro": "Mysuru is the classic family weekend from North Karnataka — illuminated palace weekends, Chamundi Hill, and Devaraja Market in one walkable core. ~430 km means an early start or overnight arrival.",
+    "bestTime": "Dussehra season is spectacular but crowded. Otherwise October–February for sightseeing comfort.",
+    "routeNote": "Often routed via Bengaluru outer ring or Hassan–Channarayapatna depending on traffic advice. Night driving on Hassan stretch needs alert drivers — we assign experienced highway hands.",
+    "mustVisit": [
+      {
+        "name": "Mysuru Palace",
+        "detail": "Indo-Saracenic icon — Sunday night lighting is famous; tickets for interior vs grounds differ."
+      },
+      {
+        "name": "Chamundi Hill & Nandi statue",
+        "detail": "City overlook and huge monolithic Nandi — monkeys along the steps; secure snacks."
+      },
+      {
+        "name": "Devaraja Market",
+        "detail": "Flowers, spices, and silk — morning is colourful and cooler."
+      }
+    ],
+    "hiddenGems": [
+      {
+        "name": "St. Philomena's Cathedral",
+        "detail": "Neo-Gothic twin spires — stunning interior many palace-only tourists skip."
+      },
+      {
+        "name": "Ranganathittu Bird Sanctuary",
+        "detail": "Short boat rides among islets — 20 km from city; best winter bird season."
+      },
+      {
+        "name": "Srirangapatna island town",
+        "detail": "Tipu Sultan history en route from Bangalore side — fort and dungeons on the Kaveri."
+      }
+    ],
+    "foodStops": [
+      {
+        "name": "Hassan / Channarayapatna",
+        "detail": "Coffee and set dosa if routed through Hassan hills."
+      }
+    ],
+    "travelTips": [
+      "Palace footwear rules — expect a short barefoot walk in temple areas inside.",
+      "Buy silk with government emporium tags if authenticity matters.",
+      "Weekend palace lighting: return trips to Hubli often start next morning.",
+      "Combine Mysuru + Coorg only if you have 2+ days — distances add up."
+    ]
+  },
+  "hubli-to-hyderabad": {
+    "title": "Hubli to Hyderabad — Deccan city break",
+    "intro": "Hyderabad mixes Old City biryani lanes with HITEC City's glass towers. From Hubli it's a full-day cross-state drive — popular for medical tourism, weddings, and family visits in Telangana.",
+    "bestTime": "November to February — summer Deccan heat is harsh for walking Charminar area.",
+    "routeNote": "Via Solapur–Humnabad–Zaheerabad or variations on NH-50 series — long but steady toll roads. Specify Old City vs Gachibowli drop to save an hour of city crossing.",
+    "mustVisit": [
+      {
+        "name": "Charminar & Laad Bazaar",
+        "detail": "Old City heart — pearls, bangles, and Irani chai nearby."
+      },
+      {
+        "name": "Golconda Fort",
+        "detail": "Afternoon sound-and-light or sunset on the walls — carry water for the climb."
+      },
+      {
+        "name": "Ramoji Film City (full day)",
+        "detail": "If entertainment is the goal, dedicate a day — too far for a casual add-on."
+      }
+    ],
+    "hiddenGems": [
+      {
+        "name": "Qutb Shahi Tombs (Golconda area)",
+        "detail": "Serene domed necropolis — quieter than Charminar crowds, equally photogenic."
+      },
+      {
+        "name": "Durgam Cheruvu secret lake walk",
+        "detail": "HITEC City locals' evening walk — rare green pocket amid offices."
+      },
+      {
+        "name": "Chilkur Balaji (Visa Temple)",
+        "detail": "Unique pilgrimage ritual culture — fascinating even if you're not praying."
+      }
+    ],
+    "foodStops": [
+      {
+        "name": "Zaheerabad biryani stops",
+        "detail": "Highway Anantapur–Hyderabad belt has trusted late-night tea and tiffin."
+      }
+    ],
+    "travelTips": [
+      "Start before 5 AM from Hubli to reach Hyderabad by late afternoon.",
+      "Airport (HYD) transfers need terminal — city is 40+ km from Secunderabad.",
+      "Biryani queues at peak hours — driver-local knowledge helps.",
+      "Two-driver rotation available on request for same-day there-and-back (rare, tiring)."
+    ]
+  },
+  "hubli-to-udupi": {
+    "title": "Udupi — Krishna matha and coastal Karnataka",
+    "intro": "Udupi is pilgrimage and plate meals — then beaches ten minutes west. Manipal students and KMC families book this route constantly from Hubli for a reliable door-to-door run.",
+    "bestTime": "Year-round; Janmashtami and temple festivals are busy. Monsoon brings lush green but heavy rain bursts.",
+    "routeNote": "Via Shimoga–Agumbe ghats or Davangere–Chitradurga–Hassan depending on season — Agumbe is scenic but fog-prone. Send college or hospital pin for Manipal drops.",
+    "mustVisit": [
+      {
+        "name": "Sri Krishna Matha",
+        "detail": "Core temple with window darshan tradition — dress code enforced."
+      },
+      {
+        "name": "Malpe Beach & St. Mary's Island boat",
+        "detail": "Ferry to basalt-column island when sea is calm — mornings best."
+      },
+      {
+        "name": "Kaup Beach lighthouse",
+        "detail": "Dramatic waves on rocky coast — short drive south of Udupi town."
+      }
+    ],
+    "hiddenGems": [
+      {
+        "name": "Kodi Bengre delta village",
+        "detail": "Where river meets sea — boat rides and seafood shacks locals love, unknown to most North Karnataka visitors."
+      },
+      {
+        "name": "Pajaka Kshetra",
+        "detail": "Birthplace of Madhvacharya — peaceful matha complex away from beach traffic."
+      },
+      {
+        "name": "Kudlu Theertha falls (Agumbe detour)",
+        "detail": "Jungle waterfall if you take the ghats route — short trek, leeches in monsoon."
+      }
+    ],
+    "foodStops": [
+      {
+        "name": "Udupi vegetarian meals",
+        "detail": "Unlimited thali on plantain leaf — lunch timing 11:30–2:30 typical."
+      }
+    ],
+    "travelTips": [
+      "Temple closes afternoon — plan arrival for morning or evening darshan.",
+      "Manipal is uphill from Udupi town — fare is same but time differs.",
+      "Agumbe ghat: Innova handles hairpins better in rain.",
+      "Return same day is possible but tight if you add Malpe boat."
+    ]
+  },
+  "hubli-to-vijayapura": {
+    "title": "Vijayapura (Bijapur) — Adil Shahi monuments",
+    "intro": "Vijayapura is a monument city — Gol Gumbaz's whispering gallery alone justifies the trip. Hubli families combine it with Badami in a heritage weekend.",
+    "bestTime": "October to March for walking between tombs. Midday summer is brutal on open plazas.",
+    "routeNote": "Direct run southwest on NH-52 — flat Deccan roads, ~2.5 hours. Easy same-day round trip from Hubli.",
+    "mustVisit": [
+      {
+        "name": "Gol Gumbaz",
+        "detail": "World's second-largest dome — climb the whispering gallery for the acoustic trick."
+      },
+      {
+        "name": "Ibrahim Roza",
+        "detail": "Often called the Taj of the Deccan — symmetrical tombs and lawns."
+      },
+      {
+        "name": "Bara Kaman incomplete mausoleum",
+        "detail": "Dramatic stone arches — quick stop, strong photos."
+      }
+    ],
+    "hiddenGems": [
+      {
+        "name": "Malik-e-Maidan cannon",
+        "detail": "One of the largest medieval cannons — atop a rampart locals pass daily, tourists overlook."
+      },
+      {
+        "name": "Uppali Buruj watchtower",
+        "detail": "City wall views — steep steps, nearly empty on weekdays."
+      },
+      {
+        "name": "Almatti Dam garden (short detour)",
+        "detail": "Evening fountain show when reservoir is full — picnic stop Hubli drivers know."
+      }
+    ],
+    "foodStops": [
+      {
+        "name": "Vijayapura jowar roti meals",
+        "detail": "Traditional North Karnataka lunch houses near the station area."
+      }
+    ],
+    "travelTips": [
+      "Photography rules vary inside tombs — no flash near frescoes.",
+      "Combine with Badami same day if you start at 6 AM from Hubli.",
+      "Flat terrain — sedan is fine; summer AC essential.",
+      "Guided history optional — plaques are sparse, a little reading helps."
+    ]
+  },
+  "hubli-to-badami": {
+    "title": "Badami — cave temples and red sandstone cliffs",
+    "intro": "Badami's rock-cut caves stare over Agastya Lake — Chalukya art in a dramatic canyon. It's the anchor of the heritage triangle with Pattadakal and Aihole nearby.",
+    "bestTime": "November to February. Climb caves early; sandstone gets hot by 10 AM.",
+    "routeNote": "~105 km from Hubli via NH-52 and Bagalkot approach. Cave parking is at the lake base — short walk up steps.",
+    "mustVisit": [
+      {
+        "name": "Badami Cave Temples (1–4)",
+        "detail": "Shaiva, Vaishnava, and Jain carvings in cliff faces — shoes off, modest dress."
+      },
+      {
+        "name": "Agastya Lake & Bhoothnath temples",
+        "detail": "Walk the lake edge for classic postcard angles of cliffs reflected in water."
+      },
+      {
+        "name": "Pattadakal (UNESCO, 22 km)",
+        "detail": "Temple complex where Chalukya kings were crowned — allow two hours."
+      }
+    ],
+    "hiddenGems": [
+      {
+        "name": "Aihole temple village",
+        "detail": "Dozens of early Chalukya shrines among village lanes — archaeologist's dream, tourist-light."
+      },
+      {
+        "name": "Mahakuta group of temples",
+        "detail": "Forest spring temple cluster — locals bathe at the tank; serene midday stop."
+      },
+      {
+        "name": "Upper Shivalaya on the north fort",
+        "detail": "Steep climb above cave 1 — panoramic red canyon most visitors skip after cave 4."
+      }
+    ],
+    "foodStops": [
+      {
+        "name": "Bagalkot town",
+        "detail": "Meals and ATM before the last 30 km if you didn't eat in Hubli."
+      }
+    ],
+    "travelTips": [
+      "Monkeys at the lake — don't carry open food bags.",
+      "Pattadakal + Aihole need +4 hours — quote a heritage day package on WhatsApp.",
+      "Wear grippy shoes — cave steps are worn smooth.",
+      "Same-day Hubli–Badami–Hubli is standard for families."
+    ]
+  },
+  "hubli-to-shimoga": {
+    "title": "Shivamogga — Malnad rivers and Jog Falls gateway",
+    "intro": "Shivamogga (Shimoga) sits in lush Malnad country — coffee estates, Tunga river ghats, and the main road to Jog Falls. Hubli visitors use it as nature base or business stop.",
+    "bestTime": "August to January — Jog Falls is fullest post-monsoon. Summer is hot in the valley floor.",
+    "routeNote": "Via Davangere and Bhadravati industrial belt — ~4 hours. Jog Falls is another 1.5 hours from city; say if you want falls same day.",
+    "mustVisit": [
+      {
+        "name": "Jog Falls",
+        "detail": "Sharavathi river four-drop cascade — monsoon volume is thunderous; dry season is quieter but swimmable pools elsewhere."
+      },
+      {
+        "name": "Gajanur Dam park",
+        "detail": "Family picnic spot on the Tunga — easy half-day."
+      },
+      {
+        "name": "Tyavarekoppa Lion & Tiger Safari",
+        "detail": "Managed safari for kids — morning slots cooler."
+      }
+    ],
+    "hiddenGems": [
+      {
+        "name": "Mandagadde bird island",
+        "detail": "River islet rookery in season — serious birders' secret, unknown to general tourists."
+      },
+      {
+        "name": "Koodli river confluence",
+        "detail": "Sacred Tunga–Bhadra meeting point — peaceful, under-visited compared to temples in town."
+      },
+      {
+        "name": "Agumbe sunset (detour)",
+        "detail": "King cobra capital of India — rainforest viewpoint if you extend toward Thirthahalli."
+      }
+    ],
+    "foodStops": [
+      {
+        "name": "Davangere",
+        "detail": "Benne dosa breakfast on the way up or down."
+      }
+    ],
+    "travelTips": [
+      "Jog Falls viewpoint needs 30 min walk from parking — not ideal for heavy mobility issues.",
+      "Malnad rain appears fast — carry umbrellas Jun–Sep.",
+      "Estate homestays need 4WD sometimes — confirm road with host.",
+      "Weekend Jog crowds — leave Hubli before 6 AM."
+    ]
+  },
+  "hubli-to-kolhapur": {
+    "title": "Kolhapur — Mahalaxmi and Kolhapuri chappal country",
+    "intro": "Kolhapur is a short cross-border hop into Maharashtra — temple darshan, royal palace museums, and legendary tambda rassa meals. Many Hubli travellers stop here en route to Pune or Goa.",
+    "bestTime": "Year-round; Navratri brings heavy temple queues. Winter evenings suit palace gardens.",
+    "routeNote": "~155 km south on NH-48 via Sankeshwar border — passport not needed, but carry ID occasionally checked. Temple parking is chaotic on Tuesdays and Fridays.",
+    "mustVisit": [
+      {
+        "name": "Mahalaxmi Ambabai Temple",
+        "detail": "Shakti peetha — morning abhishekam times draw devotees from across Karnataka."
+      },
+      {
+        "name": "New Palace & museum",
+        "detail": "Indo-Saracenic residence with armoury and throne gallery."
+      },
+      {
+        "name": "Rankala Lake",
+        "detail": "Evening strolls and chaat — relaxed after temple rush."
+      }
+    ],
+    "hiddenGems": [
+      {
+        "name": "Panhala Fort",
+        "detail": "Hill fort where Shivaji strategised — misty monsoon views 20 km from city."
+      },
+      {
+        "name": "Jyotiba Temple hill (night festival season)",
+        "detail": "Locals' hill shrine — spectacular on full moon nights, empty on random weekdays."
+      },
+      {
+        "name": "Hatkanangale misal row",
+        "detail": "Highway misal joints purists rank above city tourist cafes — ask driver for the current favourite."
+      }
+    ],
+    "foodStops": [
+      {
+        "name": "Kolhapuri mutton thali",
+        "detail": "Lunch-only tradition in old city lanes — non-veg; vegetarians stick to misal and pedha."
+      }
+    ],
+    "travelTips": [
+      "Temple dress code strict — no leather belts in some queues.",
+      "Kolhapuri chappal shopping near Bawda — compare sole stitching quality.",
+      "Same-day Hubli–Kolhapur–Hubli fits temple + lunch.",
+      "One-way drops toward Pune common — quote accordingly."
+    ]
+  },
+  "hubli-to-madikeri": {
+    "title": "Madikeri (Coorg) — coffee country and misty hills",
+    "intro": "Coorg is India's coffee cup — mist, homestays, and spicy pork curries. Madikeri town anchors Abbey Falls, Raja's Seat, and day trips to Talacauvery source of the Kaveri.",
+    "bestTime": "October to March for clear views. Monsoon is romantic but landslides can delay ghats.",
+    "routeNote": "Via Hassan or Mysuru depending on road news — ~330 km, full day. Homestays often need last 5 km estate roads — share host contact.",
+    "mustVisit": [
+      {
+        "name": "Abbey Falls",
+        "detail": "Coffee estate walk to a gorge waterfall — slippery in rain."
+      },
+      {
+        "name": "Raja's Seat sunset garden",
+        "detail": "Toy train for kids and valley view — arrive before 5:30 PM."
+      },
+      {
+        "name": "Talacauvery & Bhagamandala",
+        "detail": "River origin temple — 45 km from Madikeri, half-day add-on."
+      }
+    ],
+    "hiddenGems": [
+      {
+        "name": "Namdroling Golden Temple (Bylakuppe)",
+        "detail": "Large Tibetan monastery near Kushalnagar — vivid murals, peaceful lawns, en route from Hassan."
+      },
+      {
+        "name": "Dubare elephant camp",
+        "detail": "Morning river bathing with elephants — book slot; ethical concerns vary, research ahead."
+      },
+      {
+        "name": "Mandalpatti jeep viewpoint",
+        "detail": "4x4 jeep only last stretch — 360° grassland above clouds if weather cooperates."
+      }
+    ],
+    "foodStops": [
+      {
+        "name": "Kushalnagar",
+        "detail": "Tibetan momos and thukpa before the final climb to Madikeri."
+      }
+    ],
+    "travelTips": [
+      "Carry warm layer — Coorg evenings surprise North Karnataka visitors.",
+      "Estate roads after rain need ground clearance — SUV if homestay is remote.",
+      "Minimum 2 days recommended from Hubli — same-day is exhausting.",
+      "Coffee estate tours often need prior host booking."
+    ]
+  },
+  "hubli-to-shirdi": {
+    "title": "Shirdi — Sai Baba pilgrimage from Hubli",
+    "intro": "Shirdi draws steady devotion traffic from Karnataka — long but straightforward toll highways via Solapur–Ahmednagar. Families prefer private cabs for darshan timing control.",
+    "bestTime": "Year-round pilgrimage; Thursday and festival dates are busiest. Winter drives are easiest.",
+    "routeNote": "~530 km one way — plan one night near Shirdi or a very early Hubli start. Darshan lines vary; online queue systems change — check current temple app.",
+    "mustVisit": [
+      {
+        "name": "Samadhi Mandir darshan",
+        "detail": "Core shrine — morning aarti times are most sought after."
+      },
+      {
+        "name": "Dwarkamai mosque",
+        "detail": "Where Baba lived — oil lamp and stone grinder still shown."
+      },
+      {
+        "name": "Shani Shingnapur (detour)",
+        "detail": "Open-air Shani temple village — 70 km east, no doors on houses tradition."
+      }
+    ],
+    "hiddenGems": [
+      {
+        "name": "Lendi Baug garden",
+        "detail": "Quiet temple garden many rush past after darshan — peacocks and neem shade."
+      },
+      {
+        "name": "Rahata Khandoba temple",
+        "detail": "Local deity link to Baba's early life — peaceful, non-commercial."
+      },
+      {
+        "name": "Ajanta–Ellora impossible day trip",
+        "detail": "Too far for same visit — but Aurangabad combo is possible on a 3-day cab package."
+      }
+    ],
+    "foodStops": [
+      {
+        "name": "Solapur / Ahmednagar highway dhabas",
+        "detail": "Vegetarian thali stops trusted by regular pilgrims — your driver knows clean kitchens."
+      }
+    ],
+    "travelTips": [
+      "Overnight near temple for early darshan — we wait or return next day per quote.",
+      "Temple mobile storage rules strict — minimal bags inside.",
+      "Two-day minimum from Hubli realistic; same-day return only for hardy travellers.",
+      "Share group size for Innova vs Tempo Traveller temple parking."
+    ]
+  },
+  "hubli-to-aurangabad": {
+    "title": "Aurangabad — Ajanta, Ellora, and Deccan history",
+    "intro": "Aurangabad is the gateway to Ajanta and Ellora UNESCO caves — two separate day trips from one base. From Hubli it's a long haul best done as a 3-day curated cab tour.",
+    "bestTime": "November to March — cave interiors are cool but walks between viewpoints need mild weather.",
+    "routeNote": "~580 km via Vijayapura–Solapur corridor typical. Ajanta is 100 km north; Ellora 30 km northwest — drivers stay local once you're based.",
+    "mustVisit": [
+      {
+        "name": "Ellora Caves (Kailasa Temple)",
+        "detail": "Monolithic Kailasa carved from one rock — allow 3–4 hours minimum."
+      },
+      {
+        "name": "Ajanta Caves",
+        "detail": "Murals and stupas in a horseshoe gorge — closed Monday; bus from parking to viewpoint."
+      },
+      {
+        "name": "Bibi ka Maqbara",
+        "detail": "Dubbed mini Taj — evening lighting pleasant."
+      }
+    ],
+    "hiddenGems": [
+      {
+        "name": "Daulatabad Fort",
+        "detail": "Medieval defence maze — echo passages and steep tunnels kids love."
+      },
+      {
+        "name": "Grishneshwar Jyotirlinga",
+        "detail": "Near Ellora — completes Shiva pilgrimage loops many cave visitors skip."
+      },
+      {
+        "name": "Pitalkhora caves",
+        "detail": "Older, quieter rock-cut cluster — needs detour, almost zero crowds."
+      }
+    ],
+    "foodStops": [
+      {
+        "name": "Vijayapura lunch break",
+        "detail": "Split the long drive with Gol Gumbaz morning stop if doing heritage combo."
+      }
+    ],
+    "travelTips": [
+      "Don't attempt Ajanta + Ellora same day — fatigue kills appreciation.",
+      "Cave footwear: grippy sandals, socks optional inside.",
+      "Photography flash banned in Ajanta murals.",
+      "Quote 3-day package on WhatsApp — day rates cheaper than guessing returns."
+    ]
+  }
+}

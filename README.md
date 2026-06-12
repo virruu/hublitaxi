@@ -59,6 +59,10 @@ Set **`fromPrice`** per route in `routes.json` (sedan round-trip). Other
 vehicle fares on route pages scale from that using `perKm` in `fleet.json`
 (`src/lib/pricing.ts`).
 
+Travel guides (must-visit places, hidden gems, road tips) live in
+`src/data/route-guides.json` — one entry per route `slug`. The route page
+renders this via `RouteTravelGuide`.
+
 ## Images
 
 Fleet photos go in **`public/images/fleet/`**. Name files after the vehicle

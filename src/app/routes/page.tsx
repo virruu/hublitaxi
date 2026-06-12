@@ -9,7 +9,7 @@ import { ArrowRight, MapPin, Clock } from "@/components/Icons";
 export const metadata: Metadata = {
   title: "Outstation Taxi Routes from Hubli",
   description:
-    "Browse all outstation taxi routes from Hubli — Goa, Bangalore, Hampi, Gokarna, Dandeli and more. Fixed fares, one-way & round-trip cabs, 24/7 booking.",
+    "Browse all outstation taxi routes from Hubli — Goa, Bangalore, Pune, Mysore, Hyderabad, Hampi, Udupi, Coorg and more. Each route includes fares, travel tips, and places to visit.",
   alternates: { canonical: "/routes" },
 };
 

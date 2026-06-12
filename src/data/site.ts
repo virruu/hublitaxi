@@ -15,9 +15,9 @@ export const site = {
     "Book reliable local, airport and outstation taxis in Hubli–Dharwad. Clean cars, professional drivers, transparent fares and 24/7 availability. Instant booking on call or WhatsApp.",
   /** Open Graph / social share image (1200×630). Replace file at this path. */
   ogImage: "/images/og.jpg",
-  phone: "+91 99016 57428",
-  phoneHref: "+919901657428",
-  whatsapp: "919901657428",
+  phone: "+91 88844 77116",
+  phoneHref: "+918884477116",
+  whatsapp: "918884477116",
   email: "bookings@hublitaxi.com",
   address: {
     street: "Station Road",
@@ -33,7 +33,7 @@ export const site = {
   hours: "24/7",
   rating: {
     value: "4.9",
-    count: "1280",
+    count: "1270",
   },
   social: {
     facebook: "https://facebook.com/",

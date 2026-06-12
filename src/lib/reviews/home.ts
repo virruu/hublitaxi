@@ -1,6 +1,7 @@
-import testimonials from "@/data/testimonials.json";
 import { site } from "@/data/site";
-import { getApprovedReviews } from "@/lib/reviews/store";
+import { HOME_PREVIEW_COUNT } from "@/lib/reviews/constants";
+import { getHomeReviewsPage, getSeededReviews } from "@/lib/reviews/public";
+import { getApprovedReviewRatings } from "@/lib/reviews/store";
 import type { PublicReview } from "@/lib/reviews/types";
 
 export type HomeReview = PublicReview;
@@ -12,19 +13,11 @@ export type HomeReviewStats = {
 };
 
 export async function getHomeReviews(): Promise<HomeReviewStats> {
-  const customerReviews = await getApprovedReviews(500);
-  const seeded: HomeReview[] = testimonials.map((t, i) => ({
-    id: `seed-${i}`,
-    name: t.name,
-    location: t.location,
-    rating: t.rating,
-    text: t.text,
-    created_at: "",
-  }));
+  const seeded = getSeededReviews();
+  const customerRatings = await getApprovedReviewRatings();
+  const allRatings = [...customerRatings, ...seeded.map((s) => s.rating)];
 
-  const reviews = [...customerReviews, ...seeded];
-
-  if (reviews.length === 0) {
+  if (allRatings.length === 0) {
     return {
       reviews: [],
       totalCount: Number(site.rating.count),
@@ -32,9 +25,10 @@ export async function getHomeReviews(): Promise<HomeReviewStats> {
     };
   }
 
-  const totalCount = reviews.length;
+  const { reviews } = await getHomeReviewsPage(0, HOME_PREVIEW_COUNT);
+  const totalCount = allRatings.length;
   const average =
-    reviews.reduce((sum, r) => sum + r.rating, 0) / reviews.length;
+    allRatings.reduce((sum, r) => sum + r, 0) / allRatings.length;
 
   return {
     reviews,

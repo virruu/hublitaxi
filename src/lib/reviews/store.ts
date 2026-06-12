@@ -120,16 +120,35 @@ async function writeStore(data: ReviewData): Promise<void> {
   await writeFileStore(data);
 }
 
-export async function getApprovedReviews(limit = 500): Promise<PublicReview[]> {
-  const { reviews } = await readStore();
+function getApprovedSorted(reviews: ReviewRecord[]) {
   return reviews
     .filter((r) => r.status === "approved")
     .sort(
       (a, b) =>
         new Date(b.created_at).getTime() - new Date(a.created_at).getTime()
-    )
-    .slice(0, limit)
-    .map(toPublicReview);
+    );
+}
+
+export async function getApprovedReviewRatings(): Promise<number[]> {
+  const { reviews } = await readStore();
+  return getApprovedSorted(reviews).map((r) => r.rating);
+}
+
+export async function getApprovedReviewsPage(
+  offset = 0,
+  limit = 12
+): Promise<{ reviews: PublicReview[]; total: number }> {
+  const { reviews } = await readStore();
+  const approved = getApprovedSorted(reviews);
+  return {
+    reviews: approved.slice(offset, offset + limit).map(toPublicReview),
+    total: approved.length,
+  };
+}
+
+export async function getApprovedReviews(limit = 500): Promise<PublicReview[]> {
+  const { reviews } = await getApprovedReviewsPage(0, limit);
+  return reviews;
 }
 
 export async function getPendingReviews(): Promise<Review[]> {

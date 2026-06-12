@@ -4,6 +4,7 @@ import { useState } from "react";
 import services from "@/data/services.json";
 import routes from "@/data/routes.json";
 import fleet from "@/data/fleet.json";
+import { trackBookingLead } from "@/lib/analytics";
 import { site, telLink, whatsappLink } from "@/data/site";
 import { Phone, WhatsApp, Check } from "@/components/Icons";
 
@@ -34,6 +35,12 @@ export function BookingForm({ defaultRoute }: { defaultRoute?: string }) {
 
   const onSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+    trackBookingLead({
+      tripType: trip,
+      service: cab,
+      vehicle,
+      hasPhone: phone.trim().length > 0,
+    });
     window.open(whatsappLink(message), "_blank", "noopener,noreferrer");
   };
 
@@ -180,7 +187,12 @@ export function BookingForm({ defaultRoute }: { defaultRoute?: string }) {
         <WhatsApp className="h-5 w-5" />
         Get instant quote on WhatsApp
       </button>
-      <a href={telLink} className="btn-outline mt-3 w-full">
+      <a
+        href={telLink}
+        className="btn-outline mt-3 w-full"
+        data-analytics="call"
+        data-analytics-location="booking_form"
+      >
         <Phone className="h-4 w-4" />
         Or call {site.phone}
       </a>

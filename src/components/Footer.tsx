@@ -22,7 +22,12 @@ export function Footer() {
             Hubli–Dharwad, available 24/7.
           </p>
           <div className="mt-5 flex flex-wrap gap-3">
-            <a href={telLink} className="btn-primary !px-4 !py-2 text-xs">
+            <a
+              href={telLink}
+              className="btn-primary !px-4 !py-2 text-xs"
+              data-analytics="call"
+              data-analytics-location="footer"
+            >
               <Phone className="h-4 w-4" /> Call
             </a>
             <a
@@ -30,6 +35,8 @@ export function Footer() {
               target="_blank"
               rel="noopener noreferrer"
               className="btn-whatsapp !px-4 !py-2 text-xs"
+              data-analytics="whatsapp"
+              data-analytics-location="footer"
             >
               <WhatsApp className="h-4 w-4" /> WhatsApp
             </a>
@@ -88,7 +95,12 @@ export function Footer() {
             </li>
             <li className="flex items-center gap-2">
               <Phone className="h-4 w-4 shrink-0 text-brand-400" />
-              <a href={telLink} className="hover:text-brand-400">
+              <a
+                href={telLink}
+                className="hover:text-brand-400"
+                data-analytics="call"
+                data-analytics-location="footer_contact"
+              >
                 {site.phone}
               </a>
             </li>

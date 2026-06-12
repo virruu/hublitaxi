@@ -24,7 +24,12 @@ export function CtaBanner() {
               Available 24/7.
             </p>
             <div className="mt-7 flex flex-col items-center justify-center gap-3 sm:flex-row">
-              <a href={telLink} className="btn-dark w-full sm:w-auto">
+              <a
+                href={telLink}
+                className="btn-dark w-full sm:w-auto"
+                data-analytics="call"
+                data-analytics-location="cta_banner"
+              >
                 <Phone className="h-4 w-4" />
                 Call {site.phone}
               </a>
@@ -33,6 +38,8 @@ export function CtaBanner() {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn-whatsapp w-full sm:w-auto"
+                data-analytics="whatsapp"
+                data-analytics-location="cta_banner"
               >
                 <WhatsApp className="h-5 w-5" />
                 Book on WhatsApp

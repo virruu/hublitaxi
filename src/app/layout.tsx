@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import { site } from "@/data/site";
+import { Analytics } from "@/components/Analytics";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { StickyMobileCta } from "@/components/StickyMobileCta";
@@ -73,6 +74,7 @@ export default function RootLayout({
         <main className="pb-20 lg:pb-0">{children}</main>
         <Footer />
         <StickyMobileCta />
+        <Analytics />
       </body>
     </html>
   );

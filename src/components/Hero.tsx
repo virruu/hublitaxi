@@ -63,7 +63,7 @@ Book your cab in under a minute.
 
           <dl className="mt-9 grid max-w-md grid-cols-3 gap-4">
             {[
-              ["50k+", "Rides completed"],
+              ["25k+", "Rides completed"],
               ["100+", "Routes covered"],
               ["24/7", "Support"],
             ].map(([n, l]) => (

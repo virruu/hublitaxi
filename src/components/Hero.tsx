@@ -24,12 +24,25 @@ export function Hero({ ratingValue, ratingCount }: HeroProps) {
       />
       <div className="container-px relative grid items-center gap-12 py-14 lg:grid-cols-[1.05fr_0.95fr] lg:py-20">
         <div className="animate-fade-up">
-          <span className="eyebrow">
-            <Star className="h-3.5 w-3.5 text-brand-600" />
-            Rated {value}/5 by {count} rider{count === 1 ? "" : "s"}
-          </span>
+          <div className="flex flex-wrap items-center gap-3">
+  <span className="eyebrow">
+    <Star className="h-3.5 w-3.5 text-brand-600" />
+    Rated {value}/5 by {count} rider{count === 1 ? "" : "s"}
+  </span>
+
+  <span className="inline-flex items-center rounded-full bg-brand-500 px-4 py-2 text-sm font-bold text-ink-900 shadow-lg">
+    🎉 ₹250 OFF + FREE Pickup
+  </span>
+</div>
+
+<p className="mt-3 text-sm font-medium text-brand-300">
+  On bookings above ₹2,000 • Limited-time offer
+</p>
           <h1 className="mt-5 text-4xl font-black leading-[1.05] tracking-tight sm:text-5xl lg:text-6xl">
-            Hubli & Hubballi taxi service — book in under a minute
+            Hubli & Hubballi taxi service
+            <span className="block text-brand-400">
+Book your cab in under a minute.
+</span>
           </h1>
           <p className="mt-5 max-w-xl text-lg text-gray-300">
             Clean cars, professional drivers and honest fixed fares for local
